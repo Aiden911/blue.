@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: "Noto Sans TC", sans-serif;
+    }
+
+    .container {
+      background-color: black;
+      margin: 0 auto;
+    }
+
+    /* header---------- */
+    .header {
+      display: flex;
+      width: 100%;
+      height: 50px;
+      justify-content: space-between;
+      /* border: 1px solid blue; */
+    }
+
+    .header a {
+      text-decoration: none;
+      color: #318CB8;
+      font-weight: 900;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 50px;
+
+    }
+
+    .list-lift {
+      display: flex;
+      width: 420px;
+      /* border: 1px solid red; */
+      justify-content: space-around;
+      letter-spacing: 2px;
+    }
+
+    .list-right {
+      display: flex;
+      width: 350px;
+      justify-content: space-around;
+      line-height: 50px;
+      letter-spacing: 2px;
+      font-size: 20px;
+    }
+
+    .lift-text {
+      line-height: 50px;
+    }
+
+    .right-text-first {
+      background-color: rgba(217, 217, 217, 1);
+      border-radius: 30px;
+      width: 80px;
+      height: 40px;
+      margin: auto 0;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .right-text-second {
+      background-color: #0296D4;
+      border-radius: 30px;
+      width: 80px;
+      height: 40px;
+      margin: auto 0;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .right-text-second a {
+      color: #fff;
+    }
+
+    .right-icon img {
+      height: 20px;
+      width: 20px;
+      margin: 0 auto;
+    }
+
+    .v-line {
+      border-left: 2px solid black;
+    }
+
+    /* ---------------------- */
+    .category {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .currency {
+      margin: 20px;
+      font-size: 32px;
+      color: #318CB8;
+
+    }
+
+    .price {
+      border: 1px solid #318CB8;
+      border-radius: 30px;
+      padding: 5px;
+      display: flex;
+      justify-content: space-evenly;
+      width: 60%;
+    }
+
+    .price p {
+      margin: 10px;
+      font-size: 20px;
+      color: #318CB8;
+    }
+
+    /* ---貨幣 */
+    .chart {
+      display: flex;
+      justify-content: center;
+      margin: 30px;
+    }
+
+    .chart-date {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .chart-date.rtl {
+      width: 20%;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .chart-date .date-img {
+      width: 54.7%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    .chart-date .date-img img {
+      width: 100%;
+      height: 500px;
+    }
+
+    .chart-Graph {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chart-Graph .Graph-img {
+      width: 100%;
+      height: 57.1%;
+    }
+
+    .chart-Graph .Graph-img img {
+      width: 100%;
+      height: 400px;
+    }
+
+    /* ---圖 */
+    .form {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .form .form-buy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      border: 1px solid #318CB8;
+      margin: 10px;
+      border-radius: 30px;
+      height: 300px;
+      width: 250PX;
+    }
+
+    .form .form-sell {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      border: 1px solid #318CB8;
+      margin: 10px;
+      border-radius: 30px;
+      height: 300px;
+      width: 250PX;
+    }
+
+    .form label {
+      color: #318CB8;
+      font-size: 24px;
+    }
+
+    .form input {
+      background-color: black;
+      width: 100%;
+      border: 1px solid #318CB8;
+      border-radius: 30px;
+      line-height: 3;
+    }
+
+    .form-buy .buy {
+      margin: 0 auto;
+      background-color: rgb(6, 153, 6, 0.5);
+      font-size: 24px;
+      width: 130px;
+      border-radius: 30px;
+      color: #318CB8;
+      border: none;
+
+    }
+
+    .form-sell .sell {
+      margin: 0 auto;
+      background-color: rgb(226, 18, 18, 0.5);
+      font-size: 24px;
+      width: 60%;
+      border-radius: 30px;
+      color: #318CB8;
+      border: none;
+
+    }
+
+    .record {
+      margin: 0 auto;
+      width: 80%;
+      height: 400px;
+      border: 2px solid #318CB8;
+      border-radius: 30px;
+      font-size: 20px;
+
+    }
+
+    .record .list {
+      margin: 20px;
+    }
+
+    .record .list button {
+      background-color: black;
+      color: #318CB8;
+      border: 1px solid #318CB8;
+      border-radius: 30px;
+      width: 80px;
+      height: 40px;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div section section-exchange>
+    <div class="container">
+      <div class="header">
+        <div class="list-lift">
+          <div class="logo">
+            <a href="index.html"><img src="./img/logo_0328.png" alt=""></a>
+          </div>
+          <div class="lift-text"><a href="Buying .html">一鍵買賣</a></div>
+          <div class="lift-text"><a href="exchange.html">交易▼</a></div>
+          <div class="lift-text"><a href="#">理財▼</a></div>
+          <div class="lift-text"><a href="aboutus.html">關於我們</a></div>
+        </div>
+        <div class="list-right">
+          <div class="right-text-first"><a href="login.html">登入</a></div>
+          <div class="right-text-second"><a href="register.html">註冊</a></div>
+          <div class="v-line"></div>
+
+          <div class="right-icon"><a href="#"><img src="./img/鈴鐺 藍色.svg" alt=""></a></div>
+          <div class="right-icon"><a href="#"><img src="./img/客服 藍色.svg" alt=""></a></div>
+          <div class="right-icon"><a href="#"><img src="./img/Q 藍色.svg" alt=""></a></div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="currency">貨幣類別▼</div>
+        <div class="price">
+          <p>即時價格 66666 </p>
+          <p>24h漲跌 66666 +66% </p>
+          <p>24h最高價 66666</p>
+          <p>24h最低價 66666</p>
+        </div>
+      </div>
+      <div class="chart">
+        <div class="chart-date">
+          <div class="date-img"><img src="./img/專題圖檔19.png" alt=""></div>
+        </div>
+        <div class="chart-Graph">
+          <div class="Graph-img">
+            <img src="./img/專題圖檔17.png" alt="">
+          </div>
+          <div class="form">
+            <div class="form-buy">
+              <label for="price">價格</label>
+              <input type="text" name="price" id="price">
+              <label for="quantity">數量</label>
+              <input type="text" name="quantity" id="quantity">
+              <label for="sum">總金額</label>
+              <input type="text" name="sum" id="sum">
+              <button class="buy">買入</button>
+            </div>
+            <div class="form-sell">
+              <label for="price">價格</label>
+              <input type="text" name="price" id="price">
+              <label for="quantity">數量</label>
+              <input type="text" name="quantity" id="quantity">
+              <label for="sum">總金額</label>
+              <input type="text" name="sum" id="sum">
+              <button class="sell">賣出</button>
+            </div>
+          </div>
+        </div>
+        <div class="chart-date rtl">
+          <div class="date-img"><img src="./img/專題圖檔18.png" alt=""></div>
+        </div>
+      </div>
+      <div class="record">
+        <div class="list">
+          <button>當前委託</button>
+          <button>目前庫存</button>
+          <button>歷史紀錄</button>
+          <button>資產管理</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>f
+
+</html>

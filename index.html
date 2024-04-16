@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bluestar 首頁</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	</link>
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	</link>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+	* {
+		font-family: "Noto Sans TC", sans-serif;
+	}
+
+	.topics {
+		margin: 0 auto;
+		width: 100%;
+
+	}
+
+	/* header---------- */
+
+	.header {
+		display: flex;
+		width: 100%;
+		height: 50px;
+		justify-content: space-between;
+		/* border: 1px solid blue; */
+	}
+
+	.header a {
+		text-decoration: none;
+		color: black;
+		font-weight: 900;
+	}
+
+	.logo img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.list-lift {
+		display: flex;
+		width: 420px;
+		/* border: 1px solid red; */
+		justify-content: space-around;
+		letter-spacing: 2px;
+	}
+
+	.list-right {
+		display: flex;
+		width: 350px;
+		justify-content: space-around;
+		line-height: 50px;
+		letter-spacing: 2px;
+		font-size: 20px;
+	}
+
+	.lift-text {
+		line-height: 50px;
+	}
+
+	.right-text-first {
+		background-color: rgba(217, 217, 217, 1);
+		border-radius: 30px;
+		width: 80px;
+		height: 40px;
+		margin: auto 0;
+		text-align: center;
+		line-height: 40px;
+	}
+
+	.right-text-second {
+		background-color: #0296D4;
+		border-radius: 30px;
+		width: 80px;
+		height: 40px;
+		margin: auto 0;
+		text-align: center;
+		line-height: 40px;
+	}
+
+	.right-text-second a {
+		color: #fff;
+	}
+
+	.right-icon img {
+		height: 20px;
+		width: 20px;
+		margin: 0 auto;
+	}
+
+	.v-line {
+		border-left: 2px solid black;
+	}
+
+	/* ---section-first--- */
+	.section-first {
+		background-image: url(./img/Group\ 56.svg);
+		background-size: 950px;
+		height: 600px;
+		max-width: 1920px;
+		background-repeat: no-repeat;
+		background-position: top 100px right -20px;
+		margin: 0 auto;
+	}
+
+	.section-first .container {
+		width: 1200px;
+		margin-left: 360px;
+	}
+
+	.list h1 {
+		font-size: 40px;
+		margin-top: 120px;
+		letter-spacing: 5px;
+		font-weight: 600;
+	}
+
+	.list .item {
+		display: flex;
+		height: 40px;
+		padding-top: 30px;
+		font-weight: 600;
+	}
+
+	.item .v-link {
+		border-right: 1px solid black;
+	}
+
+	.item-text {
+		font-size: 32px;
+		padding: 0 15px;
+	}
+
+	.item-button {
+		margin: 40px 0 100px;
+	}
+
+	.item-button {
+		background-color: #0296D4;
+		width: 300px;
+		height: 60px;
+		font-size: 24px;
+		font-weight: 600;
+		border-radius: 30px;
+		text-align: center;
+		line-height: 60px;
+	}
+
+	.item-button a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	/* --------Carousel */
+	.owl-theme .item {
+		height: 10rem;
+		background: #4dc7a0;
+		border-radius: 50px;
+	}
+
+	.owl-carousel .item h4 {
+		color: #fff;
+		font-weight: 400;
+		font-size: 1.4375rem;
+		margin-top: 0rem;
+	}
+
+	.owl-carousel .item h4 img {
+		border-radius: 30px;
+	}
+
+	/* Marquee-- */
+	.section-marquee .container {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.marquee {
+		width: 100%;
+		height: 60px;
+		background-color: #7DD9F2;
+		overflow: hidden;
+	}
+
+	.marquee-text {
+		display: inline-block;
+		white-space: nowrap;
+		animation: marquee 30s linear infinite;
+		font-size: 18px;
+		line-height: 60px;
+	}
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+
+	/* ---safety--- */
+	.safety-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #F2F3F7;
+		height: 130px;
+	}
+
+	.safety-item {
+		display: flex;
+	}
+
+	.safety-text {
+		font-size: 16px;
+	}
+
+	.sefety-pic {
+		height: 50px;
+		width: 100px;
+		padding-right: 10px;
+	}
+
+	.safety-item+.safety-item::before {
+		content: "";
+		border: 0.5px solid black;
+		margin: 0 10px;
+	}
+
+	/* ---chart--- */
+	.section-chart .container {
+		width: 1200px;
+		margin: auto;
+	}
+
+	.chart {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 40px 0;
+	}
+
+	.chart h2 {
+		font-size: 32px;
+	}
+
+	.chart a {
+		text-decoration: none;
+		color: black;
+		font-size: 20px;
+	}
+
+	/* ---choose--- */
+	.section-choose {
+		margin: 0 auto;
+		background-color: #F2F3F7;
+	}
+
+	.section-choose .container {
+		padding: 70px;
+		width: 1200px;
+		margin: 0 auto;
+	}
+
+	.choose {
+		text-align: center;
+	}
+
+	.choose h2 {
+		font-size: 36px;
+	}
+
+	.choose-Options a+a::before {
+		content: "";
+		border: 1px solid white;
+		margin: 0 50px;
+	}
+
+	.choose-Options {
+		background-color: #0296D4;
+		width: 600px;
+		height: 50px;
+		margin: 30px auto 100px;
+		border-radius: 50px;
+	}
+
+	.choose-Options a {
+		text-decoration: none;
+		font-size: 20px;
+		color: white;
+		line-height: 50px;
+	}
+
+	.choose-list {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.choose-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		width: 300px;
+		height: 290px;
+		font-weight: 600;
+		background-color: #fff;
+		border-radius: 30px;
+
+	}
+
+	.choose-item img {
+		width: 70px;
+		height: 70px;
+		margin: 0 auto;
+
+	}
+
+	.choose-item p {
+		font-size: 32px;
+	}
+
+	.choose-item span {
+		font-size: 24px;
+	}
+
+	.choose-item a img {
+		width: 40px;
+		height: 40px;
+	}
+
+	/* ---tea--- */
+	.section-tea .container {
+		width: 1200px;
+		margin: 0px auto;
+		background-image: url(./img/下載\ \(1\).png);
+		background-size: 850px;
+		height: 600px;
+		background-repeat: no-repeat;
+		background-position: top -80px right -100px;
+	}
+
+	.tea-text {
+		margin: 0 100px;
+	}
+
+	.tea-text h2 {
+		font-size: 36px;
+		padding: 40px 0;
+	}
+
+	.tea-text p {
+		font-size: 24px;
+		margin-bottom: 40px;
+		font-weight: 600;
+	}
+
+	.tea-text .button {
+		background-color: #0296D4;
+		width: 330px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		border-radius: 30px;
+		font-size: 24px;
+		font-weight: 600;
+	}
+
+	.tea-text a {
+		text-decoration: none;
+		color: white;
+	}
+
+	/* ---customer service--- */
+	.section-service {
+		background-color: #F2F3F7;
+		margin-top: 50px;
+		background-image: url(./img/長條.svg);
+		background-size: cover;
+		height: 600px;
+		background-repeat: no-repeat;
+		background-position: top 0px right 836px;
+		;
+	}
+
+	.section-service .container {
+		margin: 0 auto;
+
+		width: 1200px;
+
+	}
+
+	.service-list {
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+
+	}
+
+	.service-list h2 {
+		font-size: 36px;
+		margin-top: 50px;
+
+	}
+
+	.service-list p {
+		font-size: 24px;
+	}
+
+	.service-list .item {
+		background-color: #fff;
+		width: 450px;
+		height: 100px;
+		margin: 30px 0;
+		border: 1px solid black;
+		border-radius: 30px;
+		text-align: center;
+		line-height: 50px;
+		font-weight: 600;
+	}
+
+	/* ---join--- */
+	.setcion-join {
+		background-image: url(./img/水管.svg);
+		background-size: 100%;
+		height: 550px;
+		background-repeat: no-repeat;
+		background-position: top -50px right 0px;
+	}
+
+	.setcion-join .container {
+		width: 1200PX;
+		margin: 0 auto;
+	}
+
+	.join-text {
+		position: relative;
+	}
+
+	.join-text h2 {
+		text-align: center;
+		color: #fff;
+		font-size: 48px;
+		padding-top: 50px;
+	}
+
+	.join-text a {
+		text-decoration: none;
+		color: black;
+		font-size: 24px;
+
+	}
+
+	.join-text .button {
+		width: 300px;
+		height: 50px;
+
+		border-radius: 30px;
+		background-color: #fff;
+		text-align: center;
+		line-height: 50px;
+		position: absolute;
+		left: 37%;
+		top: 110%;
+		font-weight: 600;
+	}
+
+	/* ---footer--- */
+	.section-footer {
+		margin: 0 auto;
+		margin-top: 60px;
+	}
+
+	.section-footer .container {
+		width: 1200px;
+		margin: 0 auto;
+	}
+
+	.footer-list {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.footer-item {
+		width: 130px;
+	}
+
+	.footer-item h3 {
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.footer-item nav a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+		color: black;
+		font-size: 16px;
+		padding: 5px;
+	}
+
+	.footer-item .footer-icon {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	.footer-item .footer-icon img {
+		width: 20px;
+		height: 20px;
+
+	}
+
+	.footer-statement {
+		text-align: center;
+		font-size: 20px;
+		margin: 50px 0 20px;
+	}
+
+	/* ---- */
+	.dialogue {
+		width: 360px;
+		height: 640px;
+		border-radius: 30px;
+		border: 1px solid black;
+		display: flex;
+		flex-direction: column;
+		margin: 30px;
+		display: none;
+		position: absolute;
+		top: 8%;
+    right: -1%;
+		z-index: 30;
+		background: #fff;
+	}
+
+	.dialogue .header {
+		width: 360px;
+		height: 15%;
+		background-color: #224E6B;
+		border-radius: 30px 30px 0 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.dialogue .header>h2 {
+		padding: 20px 0 0 20px;
+		font-size: 16px;
+	}
+
+	.dialogue .header>p {
+		margin: 20px 0 0 20px;
+		font-size: 16px;
+	}
+
+	.body .dialogue-list {
+		display: flex;
+		flex-wrap: wrap;
+		height: 500px;
+		margin: 20px 10px;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.dialogue-list .text-img {
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dialogue-list .text-img img {
+		width: 30px;
+		height: 30px;
+
+	}
+
+	.dialogue-item {
+		display: flex;
+	}
+
+	.dialogue-list .text-img p {
+		font-size: 12px;
+	}
+
+	.dialogue-list .text {
+		width: 220px;
+		height: 60px;
+		margin: 5px;
+		background-color: #7DD9F2;
+		border-radius: 10px;
+	}
+
+	.dialogue-list .text p {
+		margin: 5px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 60px;
+	}
+
+	.text-list .text-time p {
+		font-size: 10px;
+		margin-left: 10px;
+	}
+
+	.dialogue-list .text-botton {
+		display: flex;
+	}
+
+	.text-botton .text-icon img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.text-botton .text-frame {
+		width: 250px;
+		height: 30px;
+		border: 1px solid black;
+		border-radius: 30px;
+	}
+
+	.container .Click img {
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		bottom: 7%;
+		right: 1%;
+	}
+
+
+	/* .Click input[checkbox] + .dialogue {
+      display: block;
+    } */
+</style>
+
+<body>
+	<div class="topics">
+		<div class="header">
+			<div class="list-lift">
+				<div class="logo">
+					<a href="index.html"><img src="./img/logo_0328.png" alt=""></a>
+				</div>
+				<div class="lift-text"><a href="Buying .html">一鍵買賣</a></div>
+				<div class="lift-text"><a href="exchange.html">交易<img src="./img/Vector (3).png" alt=""></a></div>
+				<div class="lift-text"><a href="#">理財<img src="./img/Vector (3).png" alt=""></a></div>
+				<div class="lift-text"><a href="aboutus.html">關於我們</a></div>
+			</div>
+			<div class="list-right">
+				<div class="right-text-first"><a href="login.html">登入</a></div>
+				<div class="right-text-second"><a href="register.html">註冊</a></div>
+				<div class="v-line"></div>
+
+				<div class="right-icon"><a href="#"><img src="./img/Vector.png" alt=""></a></div>
+				<div class="right-icon"><a href="#"><img src=".//img/Vector (1).png" alt=""></a></div>
+				<div class="right-icon"><a href="#"><img src="./img/Vector (2).png" alt=""></a></div>
+			</div>
+		</div>
+		<div class="section section-first">
+			<div class="container">
+				<div class="list">
+					<h1>藍星 Blue star 加密貨幣交易所<br>在圓形貨幣世界中璀璨前行</h1>
+					<div class="item">
+						<div class="item-text">安全</div>
+						<div class="v-link"></div>
+						<div class="item-text">便利</div>
+						<div class="v-link"></div>
+						<div class="item-text">信賴</div>
+						<div class="v-link"></div>
+						<div class="item-text">創新</div>
+					</div>
+					<div class="item-button">
+						<a href="register.html">立即註冊</a>
+					</div>
+				</div>
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+						<h4><img src="./img/專題圖檔03-fotor-20240401161723.png" alt=""></h4>
+					</div>
+					<div class="item">
+						<h4><img src="./img/專題圖檔04-fotor-20240401161849.png" alt=""></h4>
+					</div>
+					<div class="item">
+						<h4><img src="./img/專題圖檔05.png" alt=""></h4>
+					</div>
+					<div class="item">
+						<h4><img src="./img/專題圖檔03-fotor-20240401161723.png" alt=""></h4>
+					</div>
+					<div class="item">
+						<h4><img src="./img/專題圖檔04-fotor-20240401161849.png" alt=""></h4>
+					</div>
+					<div class="item">
+						<h4><img src="./img/專題圖檔05.png" alt=""></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="settion section-dialogue">
+			<div class="container">
+				<div class="dialogue">
+					<div class="header">
+						<h2>藍星客服</h2>
+						<p>服務時間:周一至周五 09:30-20:00</p>
+					</div>
+					<div class="body">
+						<div class="dialogue-list">
+							<div class="dialogue-item">
+								<div class="text-img">
+									<img src="./img/logo_0328.png" alt="">
+									<p>BlueStar客服</p>
+								</div>
+								<div class="text-list">
+									<div class="text">
+										<p>你好請問需要什麼幫助嗎?</p>
+									</div>
+									<div class="text-time">
+										<p>四月一日 上午11:11</p>
+									</div>
+								</div>
+
+							</div>
+							<div class="text-botton">
+								<div class="text-icon"><img src="./img/迴紋針.svg" alt=""></div>
+								<div class="text-frame"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="Click">
+					<label for="box"><img src="./img/向上箭頭.svg" alt=""></label>
+					<input type="checkbox" name="box" id="box" class="checkbox">
+				</div>
+			</div>
+		</div>
+		<div class="section section-marquee">
+			<div class="container">
+				<div class="marquee">
+					<div class="marquee-text">
+						BITO $2.47 (+0.24%) &nbsp&nbsp&nbsp&nbspUSDC $32.47 (+0.26%) &nbsp&nbsp&nbsp&nbspBTC $2,135,808.00 (-3.72%)
+						&nbsp&nbsp&nbsp&nbspBITO $2.47 (+0.24%) &&nbsp&nbsp&nbsp&nbspUSDC $32.47 (+0.26%)
+						&nbsp&nbsp&nbsp&nbspBTC $2,135,808.00 (-3.72%) &nbsp&nbsp&nbsp&nbspUSDC $32.47 (+0.26%)
+						BITO $2.47 (+0.24%) &nbsp&nbsp&nbsp&nbspUSDC $32.47 (+0.26%) &nbsp&nbsp&nbsp&nbspBTC $2,135,808.00 (-3.72%)
+						&nbsp&nbsp&nbsp&nbspBITO $2.47 (+0.24%) &&nbsp&nbsp&nbsp&nbspUSDC $32.47 (+0.26%)
+						&nbsp&nbsp&nbsp&nbspBTC $2,135,808.00 (-3.72%) &nbsp&nbsp&nbsp&nbspUSDC $32.47 (+0.26%)
+					</div>
+				</div>
+				<div class="safety-list">
+					<div class="safety-item">
+						<div class="sefety-pic">
+							<img src="./img/幣托標題用圖00 2.png" alt="">
+						</div>
+						<div class="safety-text">
+							國際資安管理<br>安全認證
+						</div>
+					</div>
+					<div class="safety-item">
+						<div class="sefety-pic">
+							<img src="./img/幣托標題用圖02 1.png" alt="">
+						</div>
+						<div class="safety-text">
+							資安評比<br>最高等級AAA
+						</div>
+					</div>
+					<div class="safety-item">
+						<div class="sefety-pic">
+							<img src="./img/幣托標題用圖01 1.png" alt="">
+						</div>
+						<div class="safety-text">
+							資訊安全管理<br>政策聲明
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-chart">
+			<div class="container">
+				<div class="chart">
+					<h2>熱門交易貨幣</h2>
+					<div class="chart-pic"><img src="./img/幣托圖檔004.png" alt=""></div>
+					<div class="more">
+						<a href="#">探索更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-choose">
+			<div class="container">
+				<div class="choose">
+					<h2>從選擇適合自己的開始</h2>
+					<div class="choose-Options">
+						<a href="#">保守型</a>
+						<a href="#">穩健型</a>
+						<a href="#">積極型</a>
+					</div>
+					<div class="choose-list">
+						<div class="choose-item">
+							<img src="./img/robot.png" alt="">
+							<p>網格機器人</p>
+							<span>無須盯盤</span>
+							<a href="#"><img src="./img/Group 15.png" alt=""></a>
+						</div>
+						<div class="choose-item">
+							<img src="./img/logos_bitcoin.png" alt="">
+							<p>現貨交易</p>
+							<span>支援多樣下單</span>
+							<a href="#"><img src="img/Group 15.png" alt=""></a>
+						</div>
+						<div class="choose-item">
+							<img src="./img/clock.png" alt="">
+							<p>定期定額</p>
+							<span>攤平成本最佳選擇</span>
+							<a href="#"><img src="./img/Group 15.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-tea">
+			<div class="container">
+				<div class="tea-text">
+					<h2>擁有BTC只需要一杯茶的時間</h2>
+					<p>1.註冊BlueStar會員</p>
+					<p>2.完成身份認證</p>
+					<p>3.儲值台幣</p>
+					<p>4.開始買幣</p>
+					<div class="button"><a href="register.html">立即註冊</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-service">
+			<div class="container">
+				<div class="service-list">
+					<h2>解決你的疑問，我們使命必達</h2>
+					<div class="item">
+						<p>新手教學</p>
+						<span>手把手帶你進入加密貨幣世界，交易好簡單</span>
+						<a href="#"><img src="./img/Vector.svg" alt=""></a>
+					</div>
+					<div class="item">
+						<p>線上客服，有問必答</p>
+						<span>專業投資人支持團隊為您排憂解難</span>
+						<a href="#"><img src="./img/Vector.svg" alt=""></a>
+					</div>
+					<div class="item">
+						<p>防詐騙專區</p>
+						<span>停！看！聽！一起慎重保護您的資產</span>
+						<a href="#"><img src="./img/Vector.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="setcion setcion-join">
+			<div class="container">
+				<div class="join-text">
+					<h2>啟動你的帳號<br>
+						開始你的豐盛旅程</h2>
+					<div class="button"><a href="register.html">立即註冊</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="section section-footer">
+			<div class="container">
+				<div class="footer-list">
+					<div class="footer-item">
+						<h3>集團資訊</h3>
+						<nav>
+							<a href="#">官方消息</a>
+							<a href="#">使用條款</a>
+							<a href="#">隱私政策</a>
+							<a href="#">免責聲明</a>
+							<a href="#">人才招募</a>
+						</nav>
+					</div>
+					<div class="footer-item">
+						<h3>產品服務</h3>
+						<nav>
+							<a href="#">推薦獎勵</a>
+							<a href="#">一鍵買賣</a>
+							<a href="#">專業交易</a>
+							<a href="#">代幣發售</a>
+							<a href="#">系統狀態</a>
+						</nav>
+					</div>
+					<div class="footer-item">
+						<h3>客服中心</h3>
+						<nav>
+							<a href="#">全站公告</a>
+							<a href="#">常見問題</a>
+							<a href="#">聯絡我們</a>
+							<a href="#">意見回饋</a>
+							<a href="#">限制與費用</a>
+						</nav>
+					</div>
+					<div class="footer-item">
+						<h3>新手指南</h3>
+						<nav>
+							<a href="#">新手教學</a>
+							<a href="#">網格教學</a>
+							<a href="#">資訊安全</a>
+							<a href="#">防詐宣導</a>
+						</nav>
+					</div>
+					<div class="footer-item">
+						<h3>關注我們</h3>
+						<nav class="footer-icon">
+							<a href="#"><img src="./img/fb.svg" alt=""></a>
+							<a href="#"><img src="./img/yt.svg" alt=""></a>
+							<a href="#"><img src="./img/ig.svg" alt=""></a>
+							<a href="#"><img src="./img/tg.svg" alt=""></a>
+						</nav>
+					</div>
+				</div>
+				<div class="footer-statement">
+					<h4>本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+<script>
+	$(".owl-carousel").owlCarousel({
+		loop: true, // 循環播放
+		margin: 10, // 外距 10px
+		nav: true, // 顯示點點
+		responsive: {
+			0: {
+				items: 1 // 螢幕大小為 0~600 顯示 1 個項目
+			},
+			600: {
+				items: 3 // 螢幕大小為 600~1000 顯示 3 個項目
+			},
+			1000: {
+				items: 4 // 螢幕大小為 1000 以上 顯示 5 個項目
+			}
+		}
+	});
+	$('.checkbox').on('click', () => {
+		$('.dialogue').slideToggle();
+	});
+</script>
+
+</html>
