@@ -456,6 +456,15 @@
 		text-align: center;
 		line-height: 50px;
 		font-weight: 600;
+		transform: scale(1);
+		transition: .5s;
+	}
+	.service-list .item:hover{
+		transform: scale(1.2);
+	}
+	.service-list a{
+		color: black;
+		text-decoration: none;
 	}
 
 	/* ---join--- */
@@ -596,13 +605,15 @@
 
 	.dialogue .header>h2 {
 		padding: 20px 0 0 20px;
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 600;
+		color: #fff;
 	}
 
 	.dialogue .header>p {
 		margin: 20px 0 0 20px;
 		font-size: 16px;
+		color: #fff;
 	}
 
 	.body .dialogue-list {
@@ -889,20 +900,19 @@
 			<div class="container">
 				<div class="service-list">
 					<h2>解決你的疑問，我們使命必達</h2>
-					<div class="item">
+					<a href="#"><div class="item">
 						<p>新手教學</p>
-						<span>手把手帶你進入加密貨幣世界，交易好簡單</span>
-						<a href="#"><img src="./img/Vector.svg" alt=""></a>
-					</div>
-					<div class="item">
+						<span>手把手帶你進入加密貨幣世界，交易好簡單</span><img src="./img/Vector.svg" alt="">
+					</div></a>
+					<a href="#"><div class="item">
 						<p>線上客服，有問必答</p>
-						<span>專業投資人支持團隊為您排憂解難</span>
-						<a href="#"><img src="./img/Vector.svg" alt=""></a>
-					</div>
-					<div class="item">
+						<span>專業投資人支持團隊為您排憂解難</span><img src="./img/Vector.svg" alt="">
+					</div></a>
+					<a href="#"><div class="item">
 						<p>防詐騙專區</p>
-						<span>停！看！聽！一起慎重保護您的資產</span>
-						<a href="#"><img src="./img/Vector.svg" alt=""></a>
+						<span>停！看！聽！一起慎重保護您的資產</span><img src="./img/Vector.svg" alt="">
+					</div></a>
+					
 					</div>
 				</div>
 			</div>
