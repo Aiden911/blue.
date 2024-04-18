@@ -68,8 +68,17 @@
 
 	.lift-text {
 		line-height: 50px;
+		transition: .5S
 	}
+	.lift-text:hover {
+      padding:0 5px;
+      font-size: 24px;
+			
+    }
 
+		.lift-text a:hover{
+			color: #0296D4;
+		}
 	.right-text-first {
 		background-color: rgba(217, 217, 217, 1);
 		border-radius: 30px;
@@ -155,8 +164,13 @@
 		border-radius: 30px;
 		text-align: center;
 		line-height: 60px;
+		transform: scale(1);
+		transition: .5S;
 	}
-
+	.item-button:hover {
+			transform: scale(1.2);
+			
+    }
 	.item-button a {
 		text-decoration: none;
 		color: #fff;
@@ -380,8 +394,12 @@
 		border-radius: 30px;
 		font-size: 24px;
 		font-weight: 600;
+		transform: scale(1);
+		transition: .5s;
 	}
-
+	.tea-text .button:hover{
+		transform: scale(1.2);
+	}
 	.tea-text a {
 		text-decoration: none;
 		color: white;
@@ -472,7 +490,6 @@
 	.join-text .button {
 		width: 300px;
 		height: 50px;
-
 		border-radius: 30px;
 		background-color: #fff;
 		text-align: center;
@@ -481,8 +498,12 @@
 		left: 37%;
 		top: 110%;
 		font-weight: 600;
+		transform: scale(1);
+		transition: .5s;
 	}
-
+	.join-text .button:hover{
+		transform: scale(1.2);
+	}
 	/* ---footer--- */
 	.section-footer {
 		margin: 0 auto;
@@ -661,7 +682,6 @@
 	}
 
 
-
 	/* .Click input[checkbox] + .dialogue {
       display: block;
     } */
@@ -836,7 +856,7 @@
 							<img src="./img/logos_bitcoin.png" alt="">
 							<p>現貨交易</p>
 							<span>支援多樣下單</span>
-							<a href="#"><img src="img/Group 15.png" alt=""></a>
+							<a href="exchange.html"><img src="img/Group 15.png" alt=""></a>
 						</div>
 						<div class="choose-item">
 							<img src="./img/clock.png" alt="">
@@ -908,8 +928,8 @@
 						<h3>產品服務</h3>
 						<nav>
 							<a href="#">推薦獎勵</a>
-							<a href="#">一鍵買賣</a>
-							<a href="#">專業交易</a>
+							<a href="Buying .html">一鍵買賣</a>
+							<a href="exchange.html">專業交易</a>
 							<a href="#">代幣發售</a>
 							<a href="#">系統狀態</a>
 						</nav>

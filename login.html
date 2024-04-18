@@ -8,12 +8,12 @@
   </title>
   <link rel="stylesheet" href="reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
   <style>
     * {
-		font-family: "Noto Sans TC", sans-serif;
-	}
+      font-family: "Noto Sans TC", sans-serif;
+    }
 
     .topics {
       margin: 0 auto;
@@ -58,8 +58,17 @@
 
     .lift-text {
       line-height: 50px;
+      transition: .5S
     }
 
+    .lift-text:hover {
+      padding:0 5px;
+      font-size: 24px;
+    }
+
+		.lift-text a:hover{
+			color: #0296D4;
+		}
     .right-text-first {
       background-color: rgba(217, 217, 217, 1);
       border-radius: 30px;
@@ -241,8 +250,9 @@
       font-size: 24px;
       text-align: center;
     }
-    .footer-item nav{
-		margin: 10px 0;
+
+    .footer-item nav {
+      margin: 10px 0;
     }
 
     .footer-item nav a {
