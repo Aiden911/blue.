@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .section-chart .container {
+            margin: auto;
+        }
+
+        .chart-table .list {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            border-bottom: 1px solid #ccc;
+            max-width: 1000px;
+            min-width: 375px;
+            margin: 20px auto;
+        }
+
+        .chart-table .list button {
+            font-size: 1.875vw;
+            padding: 0 20px;
+            border-style: none;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+
+
+        .chart-table .list img {
+            max-width: 30px;
+            vertical-align: text-top;
+        }
+
+        .chart {
+            text-align: center;
+        }
+
+        .chart h2 {
+            font-size: 2.5vw;
+            font-weight: 600;
+        }
+
+        .chart a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5625vw;
+        }
+
+        .chart h2 {
+            margin-top: 20px;
+        }
+
+        .chart table {
+            max-width: 1000px;
+            min-width: 375px;
+            width: 100%;
+            margin: auto;
+            border-collapse: collapse;
+            font-size: 1.5625vw;
+        }
+
+        .chart tr {
+            text-align: left;
+
+        }
+
+        .chart th,
+        td {
+            padding: 10px;
+            border: none;
+
+        }
+
+        .chart th {
+            background-color: #fff;
+        }
+
+        .chart td button {
+            padding: 8px 16px;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+            font-size: 1.5625vw;
+        }
+
+        .Currency img {
+            max-width: 20px;
+            vertical-align: text-top
+        }
+
+        @media screen and (max-width: 600px) {
+            .chart table {
+                font-size: 8px;
+            }
+
+            .chart img {
+                max-width: 50px;
+            }
+
+            .chart td button {
+                font-size: 8px;/
+            }
+
+            .Currency img {
+                max-width: 10px;
+            }
+
+            .chart-table .list img {
+                max-width: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="section section-chart">
+        <div class="container">
+            <div class="chart">
+                <h2>熱門交易貨幣</h2>
+                <div class="chart-table">
+                    <div class="list">
+                        <button class="btn"><img src="./img/fire.png" alt="">主流貨幣</button>
+                        <button class="btn">漲幅榜</button>
+                        <button class="btn">跌幅榜</button>
+                        <button class="btn">24H成交榜</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>幣種</th>
+                                <th>價格</th>
+                                <th>24h漲幅</th>
+                                <th>走勢圖表</th>
+                                <th>24小時成交量</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="Currency"><img src="./img/BTC-alt-v2.svg" alt="">
+                </div>BTC / TWD</td>
+                <td>2,168,170<br>66,651 USD</td>
+                <td>-0.12%</td>
+                <td><img src="./img/btc-trend.png" alt=""></td>
+                <td>95,809,102 TWD</td>
+                <td><button>交易</button></td>
+                </tr>
+                <tr>
+                    <td class="Currency"><img src="./img/ETH-alt-v2.svg" alt="">ETH / TWD</td>
+                    <td>103,680<br>3,187 USD</td>
+                    <td>-1.68%</td>
+                    <td><img src="./img/eth-trend.png" alt=""></td>
+                    <td>49,962,539 TWD</td>
+                    <td><button>交易</button></td>
+                </tr>
+                <tr>
+                    <td class="Currency"><img src="./img/USDT-alt-v2.svg" alt="">USDT / TWD</td>
+                    <td>32.768<br>1.007 USD</td>
+                    <td>-0.16%</td>
+                    <td><img src="./img/ustd-trend.png" alt=""></td>
+                    <td>293,430,915 TWD</td>
+                    <td><button>交易</button></td>
+                </tr>
+                <tr>
+                    <td class="Currency"><img src="./img/BITO-alt-v2.svg" alt="">BITO / TWD</td>
+                    <td>2.470<br>0.075 USD</td>
+                    <td>+0.08%</td>
+                    <td><img src="./img/bito-trend.png" alt=""></td>
+                    <td>132,873 TWD</td>
+                    <td><button>交易</button></td>
+                </tr>
+                <tr>
+                    <td class="Currency"><img src="./img/USDC-alt-v2.svg" alt="">USDC / TWD</td>
+                    <td>32.822<br>1.009 USD</td>
+                    <td>-0.23%</td>
+                    <td><img src="./img/usdc-trend.png" alt=""></td>
+                    <td>1,674,158 TWD</td>
+                    <td><button>交易</button></td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="more">
+                <a href="#">探索更多</a>
+            </div>
+        </div>
+        <script>
+            let buttons = document.getElementsByClassName("btn");
+
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener("click", function () {
+                    // 取消所有按鈕的藍色
+                    for (var j = 0; j < buttons.length; j++) {
+                        buttons[j].style.borderBottomColor = "transparent";
+                    }
+                    // 點擊按鈕添加藍色
+                    event.target.style.borderBottomColor = "blue";
+                });
+            }
+        </script>
+    </div>
+</body>
