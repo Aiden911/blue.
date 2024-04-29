@@ -53,13 +53,13 @@
 		width: 25px;
 		height: 3px;
 		background-color: #000000;
-		margin: 5px 5px;
+		margin: 5px;
 
 	}
 
 	.logo-img img {
 		width: 3.90625vw;
-		margin: 5px;
+		padding: 5px;
 	}
 
 	.menu {
@@ -360,16 +360,13 @@
 	.chart h2 {
 		font-size: 2.5vw;
 		font-weight: 600;
+		margin-bottom: 5%;
 	}
 
 	.chart a {
 		text-decoration: none;
 		color: black;
 		font-size: 1.5625vw;
-	}
-
-	.chart h2 {
-		margin-top: 20px;
 	}
 
 	.chart table {
@@ -401,9 +398,12 @@
 		padding: 8px 16px;
 		color: #000000;
 		border: none;
-		border-radius: 4px;
 		cursor: pointer;
 		font-size: 1.5625vw;
+	}
+
+	.chart img {
+		width: 8.59375vw;
 	}
 
 	.trend img {
@@ -416,16 +416,22 @@
 	}
 
 	@media screen and (max-width: 600px) {
+		.chart h2 {
+			font-size: 12px;
+			font-weight: 600;
+			margin-top: 20px;
+		}
+
 		.chart table {
+			font-size: 6px;
+		}
+
+		.chart .btn {
+			padding: 8px 16px;
+			color: #000000;
+			border: none;
+			cursor: pointer;
 			font-size: 8px;
-		}
-
-		.chart img {
-			max-width: 50px;
-		}
-
-		.chart td button {
-			font-size: 8px;/
 		}
 
 		.Currency img {
@@ -534,13 +540,18 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
-			min-width: 170px;
+			min-width: 140px;
 			font-weight: 600;
 			background-color: #fff;
 			border-radius: 30px;
 			height: 23.4375vw;
-			min-height: 170px;
+			min-height: 140px;
 			margin-bottom: 20px;
+		}
+
+		.choose h2 {
+			font-size: 12px;
+			font-weight: 600;
 		}
 
 		.choose-item img {
@@ -550,11 +561,11 @@
 		}
 
 		.choose-item p {
-			font-size: 14px;
+			font-size: 10px;
 		}
 
 		.choose-item span {
-			font-size: 12px;
+			font-size: 10px;
 		}
 
 		.choose-item a img {
@@ -565,11 +576,13 @@
 
 	/* ---tea--- */
 	.section-tea .container {
-		margin: 0 auto;
-		background-image: url(./img/下載\ \(1\).png);
-		background-size: 50.625vw;
+		margin: 5% auto;
+		background-image: url(./img/tea.gif);
+		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: 80% 10%;
+
+
 	}
 
 	.tea-text {
@@ -578,7 +591,7 @@
 
 	.tea-text h2 {
 		font-size: 2.5vw;
-		padding: 40px 0;
+		padding: 5% 0;
 		font-weight: 600;
 	}
 
@@ -618,13 +631,25 @@
 			background-repeat: no-repeat;
 			background-position: 50% 30%
 		}
+
+		.tea-text h2 {
+			font-size: 12px;
+			padding: 5%;
+			font-weight: 600;
+		}
+
+		.tea-text p {
+			font-size: 10px;
+			margin: 5%;
+			font-weight: 600;
+		}
 	}
 
 	/* ---customer service--- */
 	.section-service {
 		background-color: #F2F3F7;
-		margin-top: 50px;
-		background-image: url(./img/長條.svg);
+		padding: 5% 0;
+		background-image: url(./img/shield.gif);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top 0px right 836px;
@@ -643,13 +668,13 @@
 		flex-direction: column;
 		align-items: end;
 
+
 	}
 
 	.service-list h2 {
 		font-size: 2.8125vw;
-		margin-top: 50px;
 		font-weight: 600;
-		margin: 30px;
+		margin: 3%;
 
 	}
 
@@ -661,10 +686,14 @@
 		font-size: 1.5625vw;
 	}
 
+	.service-list .item img {
+		width: 1.953125vw;
+	}
+
 	.service-list .item {
 		background-color: #fff;
 		width: 35.15625vw;
-		margin: 30px;
+		margin: 3%;
 		border: 1px solid black;
 		border-radius: 30px;
 		text-align: center;
@@ -684,16 +713,61 @@
 		text-decoration: none;
 	}
 
-	/* ---join--- */
-	.setcion-join {
-		background-image: url(./img/水管.svg);
-		background-size: 100%;
-		height: 550px;
-		background-repeat: no-repeat;
-		background-position: top -50px right 0px;
+	@media screen and (max-width: 600px) {
+		.service-list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+		}
+
+		.service-list .item {
+			background-color: #fff;
+			min-width: 180px;
+			width: 35.15625vw;
+			margin: 3%;
+			border: 1px solid black;
+			border-radius: 30px;
+			text-align: center;
+			line-height: 150%;
+			font-weight: 600;
+			/* transform: scale(1); */
+			/* transition: .5s; */
+
+		}
+
+		.service-list h2 {
+			font-size: 12px;
+			font-weight: 600;
+			margin-bottom: 5%;
+
+		}
+
+		.service-list p {
+			font-size: 10px;
+		}
+
+		.service-list .item span {
+			font-size: 8px;
+		}
+
+		.service-list .item img {
+			width: 8px;
+		}
 	}
 
-	.setcion-join .container {
+	/* ---join--- */
+	.section-join {
+		background-image: url(./img/水管.svg);
+		background-size: 124%;
+		height: 550px;
+		background-repeat: no-repeat;
+		background-position: top 0px right -150px;
+	}
+
+
+
+	.section-join .container {
 		max-width: 1200PX;
 		width: 100%;
 		margin: 0 auto;
@@ -738,10 +812,16 @@
 		transform: scale(1.2);
 	}
 
+	@media screen and (max-width: 600px) {
+		.section-join {
+			display: none;
+		}
+	}
+
 	/* ---footer--- */
 	.section-footer {
 		margin: 0 auto;
-		margin-top: 60px;
+		margin: 5%;
 	}
 
 	.section-footer .container {
@@ -760,7 +840,7 @@
 	}
 
 	.footer-item h3 {
-		font-size: 24px;
+		font-size: 1.875vw;
 		text-align: center;
 	}
 
@@ -774,7 +854,7 @@
 		align-items: center;
 		text-decoration: none;
 		color: black;
-		font-size: 16px;
+		font-size: 1.25vw;
 		padding: 5px;
 	}
 
@@ -787,15 +867,25 @@
 	}
 
 	.footer-item .footer-icon img {
-		width: 20px;
-		height: 20px;
+		width: 1.5625vw;
 
 	}
 
 	.footer-statement {
 		text-align: center;
-		font-size: 20px;
-		margin: 50px 0 20px;
+		font-size: 1.5625vw;
+		margin: 5%;
+	}
+
+	@media screen and (max-width: 600px) {
+		.footer-item.hide {
+			display: none;
+		}
+
+		.footer-item h3 {
+			font-size: 12px;
+			text-align: center;
+		}
 	}
 
 	/* ---- */
@@ -1226,7 +1316,7 @@
 	<div class="section section-footer">
 		<div class="container">
 			<div class="footer-list">
-				<div class="footer-item">
+				<div class="footer-item hide">
 					<h3>集團資訊</h3>
 					<nav>
 						<a href="#">官方消息</a>
@@ -1236,7 +1326,7 @@
 						<a href="#">人才招募</a>
 					</nav>
 				</div>
-				<div class="footer-item">
+				<div class="footer-item  hide">
 					<h3>產品服務</h3>
 					<nav>
 						<a href="#">推薦獎勵</a>
@@ -1246,7 +1336,7 @@
 						<a href="#">系統狀態</a>
 					</nav>
 				</div>
-				<div class="footer-item">
+				<div class="footer-item hide">
 					<h3>客服中心</h3>
 					<nav>
 						<a href="#">全站公告</a>
@@ -1256,7 +1346,7 @@
 						<a href="#">限制與費用</a>
 					</nav>
 				</div>
-				<div class="footer-item">
+				<div class="footer-item hide">
 					<h3>新手指南</h3>
 					<nav>
 						<a href="#">新手教學</a>
@@ -1312,7 +1402,6 @@
 		}
 
 		let buttons = document.getElementsByClassName("btn");
-
 		for (var i = 0; i < buttons.length; i++) {
 			buttons[i].addEventListener("click", function () {
 				// 取消所有按鈕的藍色
