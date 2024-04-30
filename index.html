@@ -47,6 +47,7 @@
 	.menu-icon {
 		display: none;
 		cursor: pointer;
+
 	}
 
 	.bar {
@@ -77,6 +78,7 @@
 		margin: 0;
 		display: flex;
 		justify-content: center;
+
 
 	}
 
@@ -126,6 +128,7 @@
 		.left-menu,
 		.right-menu {
 			display: none;
+			position: absolute;
 		}
 
 		.logo {
@@ -138,9 +141,9 @@
 			min-width: 30px;
 		}
 
-		.right-menu img {
+		/* .right-menu img {
 			min-width: 10px;
-		}
+		} */
 
 		.menu {
 			display: block;
@@ -149,15 +152,40 @@
 
 		.menu-icon {
 			display: block;
+			position: relative;
 		}
 
 		.menu.active .left-menu,
 		.menu.active .right-menu {
 			display: flex;
-			font-size: 15px;
-			width: 55vw;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 12vw;
+			background-color: #F2F3F7;
+			height: 30vw;
+			z-index: 2;
+		}
+
+		.menu.active .right-menu {
+			position: absolute;
+			top :5%;
+			right: 0%;
+		}
+
+		.menu.active .left-menu {
+			position: absolute;
+			top :5%;
+			right: 13%;
+		}
+
+		.left-menu li,
+		.right-menu li {
+			padding: 1vw;
+			margin: auto;
 		}
 	}
+
 
 	/* ---section-first--- */
 	.section-first {
@@ -624,25 +652,25 @@
 	@media screen and (max-width: 600px) {
 		.section-tea .container {
 			width: 100%;
-        margin: 5% auto;
-        background-image: url(./img/tea.gif);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: 80%;
-    }
-		
+			margin: 5% auto;
+			background-image: url(./img/tea.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 80%;
+		}
+
 		.tea-text h2 {
 			font-size: 12px;
 			padding: 5%;
 			font-weight: 600;
 		}
-		
+
 		.tea-text p {
 			font-size: 10px;
 			margin: 5%;
 			font-weight: 600;
 		}
-		
+
 	}
 
 	/* ---customer service--- */
@@ -1036,7 +1064,9 @@
 					<li><a href="aboutus.html">關於我們</a></li>
 				</ul>
 				<ul class="right-menu">
-					<li class="login-button"><a href="login.html">登入</a></li>
+					<li>
+						<div class="login-button"><a href="login.html">登入</a></div>
+					</li>
 					<li>
 						<div class="register-button"><a href="register.html">註冊</a></div>
 					</li>
