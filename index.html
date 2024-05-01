@@ -83,7 +83,7 @@
 	}
 
 	.right-menu img {
-		width: 1.5625vw;
+		width: clamp(10px, 1.5625vw, 20px);
 	}
 
 	.left-menu li,
@@ -96,14 +96,14 @@
 	.right-menu li a {
 		color: black;
 		text-decoration: none;
-		font-size: 1.5625vw;
+		font-size: clamp(10px, 1.5625vw, 20px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
 	.right-menu .login-button {
-		width: 4.6785vw;
+		width: 6.6785vw;
 		background-color: rgba(217, 217, 217, 1);
 		border-radius: 30px;
 		text-align: center;
@@ -112,7 +112,7 @@
 	}
 
 	.right-menu .register-button {
-		width: 4.6785vw;
+		width: 6.6785vw;
 		background-color: #0296D4;
 		border-radius: 30px;
 		text-align: center;
@@ -123,7 +123,7 @@
 		color: #fff;
 	}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 576px) {
 
 		.left-menu,
 		.right-menu {
@@ -141,9 +141,6 @@
 			min-width: 30px;
 		}
 
-		/* .right-menu img {
-			min-width: 10px;
-		} */
 
 		.menu {
 			display: block;
@@ -161,22 +158,24 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			width: 12vw;
+			width: 15vw;
 			background-color: #F2F3F7;
-			height: 30vw;
+			height: 40vw;
 			z-index: 2;
 		}
 
 		.menu.active .right-menu {
 			position: absolute;
-			top :5%;
+			top: 10%;
 			right: 0%;
+			border-radius: 0 30px 30px 0;
 		}
 
 		.menu.active .left-menu {
 			position: absolute;
-			top :5%;
-			right: 13%;
+			top: 10%;
+			right: 15%;
+			border-radius: 30px 0 0 30px;
 		}
 
 		.left-menu li,
@@ -205,7 +204,7 @@
 	}
 
 	.list h1 {
-		font-size: 2.65625vw;
+		font-size: clamp(12px, 2.65625vw, 34px);
 		margin-top: 8%;
 		letter-spacing: 5px;
 		font-weight: 600;
@@ -234,8 +233,6 @@
 		width: 15.625vw;
 		margin: 5% 0 5% 15%;
 		padding: 5px;
-		font-size: 1.875vw;
-		font-weight: 600;
 		border-radius: 30px;
 		transform: scale(1);
 		transition: .5S;
@@ -250,6 +247,8 @@
 	.item-button a {
 		text-decoration: none;
 		color: #fff;
+		font-size: clamp(10px, 1.875vw, 24px);
+		font-weight: 600;
 	}
 
 	/* --------Carousel */
@@ -279,8 +278,8 @@
 
 	.marquee {
 		width: 100%;
-		height: 50px;
-		background-color: #7DD9F2;
+		height:clamp(20px,3.90625vw,50px);
+		background-color: #0B2F47;
 		overflow: hidden;
 
 	}
@@ -290,13 +289,19 @@
 		white-space: nowrap;
 		animation: marquee 30s linear infinite;
 		font-size: 1.40625vw;
-		line-height: 50px;
+		line-height: 3.90625vw;
+		color: #fff;
 
 	}
 
 	@media screen and (max-width: 768px) {
 		.marquee-text {
-			font-size: 12px;
+			display: inline-block;
+			white-space: nowrap;
+			animation: marquee 30s linear infinite;
+			font-size:  clamp(8px, 1.40625vw, 18px);
+			line-height: clamp(8px,3.90625vw,50px);
+			color: #fff;
 		}
 	}
 
@@ -309,7 +314,8 @@
 			transform: translateX(-100%);
 		}
 	}
-
+	
+	
 
 	/* ---safety--- */
 	.safety-list {
@@ -322,11 +328,12 @@
 
 	.safety-item {
 		display: flex;
-		padding: 1.5625vw;
+		padding: clamp(10px, 1.5625vw, 20px);
 	}
 
 	.safety-text {
 		font-size: 1.40625vw;
+
 		text-align: center center;
 	}
 
@@ -347,7 +354,7 @@
 
 	@media screen and (max-width: 768px) {
 		.safety-text {
-			font-size: 10px;
+			font-size: clamp(8px, 1.40625vw, 18px);
 		}
 	}
 
@@ -362,13 +369,13 @@
 		flex-direction: row;
 		justify-content: flex-start;
 		border-bottom: 1px solid #ccc;
-		max-width: 1000px;
-		/* min-width: 375px; */
+
+
 		margin: 20px 0;
 	}
 
 	.chart-table .list button {
-		font-size: 1.875vw;
+		font-size: clamp(8px, 1.875vw, 24px);
 		padding: 0 20px;
 		border-style: none;
 		background-color: #fff;
@@ -395,16 +402,16 @@
 	.chart a {
 		text-decoration: none;
 		color: black;
-		font-size: 1.5625vw;
+		font-size: clamp(10px, 1.5625vw, 20px);
 	}
 
 	.chart table {
-		max-width: 1000px;
-		/* min-width: 375px; */
+
+
 		width: 100%;
 		margin: auto;
 		border-collapse: collapse;
-		font-size: 1.5625vw;
+		font-size: clamp(8px, 1.5625vw, 20px);
 	}
 
 	.chart tr {
@@ -428,7 +435,7 @@
 		color: #000000;
 		border: none;
 		cursor: pointer;
-		font-size: 1.5625vw;
+		font-size: clamp(8px, 1.5625vw, 20px);
 	}
 
 	.chart img {
@@ -444,7 +451,7 @@
 		vertical-align: text-top
 	}
 
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 576px) {
 		.chart h2 {
 			font-size: 12px;
 			font-weight: 600;
@@ -465,6 +472,14 @@
 
 		.Currency img {
 			max-width: 10px;
+		}
+
+		.chart td button {
+			padding: 6px 12px;
+			color: #000000;
+			border: none;
+			cursor: pointer;
+			font-size: clamp(6px, 1.5625vw, 20px);
 		}
 
 		.chart-table .list img {
@@ -509,7 +524,7 @@
 
 	.choose-Options a {
 		text-decoration: none;
-		font-size: 1.5625vw;
+		font-size: clamp(10px, 1.5625vw, 20px);
 		color: white;
 		line-height: 3.90625vw;
 	}
@@ -546,7 +561,7 @@
 	}
 
 	.choose-item span {
-		font-size: 1.875vw;
+		font-size: clamp(12px, 1.875vw, 24px);
 	}
 
 	.choose-item a img {
@@ -554,7 +569,7 @@
 
 	}
 
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 576px) {
 		.choose-list {
 			display: flex;
 			flex-direction: column;
@@ -623,7 +638,7 @@
 	}
 
 	.tea-text p {
-		font-size: 1.875vw;
+		font-size: clamp(12px, 1.875vw, 24px);
 		margin: 5%;
 		font-weight: 600;
 	}
@@ -634,7 +649,7 @@
 		text-align: center;
 		line-height: 200%;
 		border-radius: 30px;
-		font-size: 1.875vw;
+		font-size: clamp(8px, 1.875vw, 24px);
 		font-weight: 600;
 		transform: scale(1);
 		transition: .5s;
@@ -649,7 +664,7 @@
 		color: white;
 	}
 
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 576px) {
 		.section-tea .container {
 			width: 100%;
 			margin: 5% auto;
@@ -660,13 +675,13 @@
 		}
 
 		.tea-text h2 {
-			font-size: 12px;
+			font-size: clamp(10px, 2.5vw, 24px);
 			padding: 5%;
 			font-weight: 600;
 		}
 
 		.tea-text p {
-			font-size: 10px;
+			font-size: clamp(8px, 1.875vw, 24px);
 			margin: 5%;
 			font-weight: 600;
 		}
@@ -677,10 +692,6 @@
 	.section-service {
 		background-color: #F2F3F7;
 		padding: 5% 0;
-		background-image: url(./img/shield.gif);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: top 0px right 836px;
 		;
 	}
 
@@ -688,6 +699,10 @@
 		margin: 0 auto;
 		width: 100%;
 		max-width: 1200px;
+		background-image: url(./img/0001-removebg-preview.png);
+		background-size: 30vw;
+		background-repeat: no-repeat;
+		background-position: top 205px right 660px;
 
 	}
 
@@ -707,11 +722,11 @@
 	}
 
 	.service-list p {
-		font-size: 1.875vw;
+		font-size: clamp(12px, 1.875vw, 24px);
 	}
 
 	.service-list .item span {
-		font-size: 1.5625vw;
+		font-size: clamp(10px, 1.5625vw, 20px);
 	}
 
 	.service-list .item img {
@@ -741,7 +756,7 @@
 		text-decoration: none;
 	}
 
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 576px) {
 		.service-list {
 			display: flex;
 			flex-direction: column;
@@ -791,6 +806,7 @@
 		height: 550px;
 		background-repeat: no-repeat;
 		background-position: top 0px right -150px;
+		display: none;
 	}
 
 
@@ -799,35 +815,33 @@
 		max-width: 1200PX;
 		width: 100%;
 		margin: 0 auto;
-	}
-
-	.join-text {
 		position: relative;
 	}
 
 	.join-text h2 {
 		text-align: center;
 		color: #fff;
-		font-size: 48px;
-		padding-top: 50px;
+		font-size: clamp(10px, 3.125vw, 40px);
+		padding-top: 3%;
 		font-weight: 600;
-		line-height: 60px
+		line-height: 60px;
+
+
 	}
 
 	.join-text a {
 		text-decoration: none;
 		color: black;
-		font-size: 24px;
+		font-size: clamp(12px, 1.875vw, 24px);
 
 	}
 
 	.join-text .button {
-		width: 300px;
-		height: 50px;
+		width: 23.4375vw;
 		border-radius: 30px;
 		background-color: #fff;
 		text-align: center;
-		line-height: 50px;
+		line-height: 150%;
 		position: absolute;
 		left: 37%;
 		top: 110%;
@@ -868,7 +882,7 @@
 	}
 
 	.footer-item h3 {
-		font-size: 1.875vw;
+		font-size: clamp(12px, 1.875vw, 24px);
 		text-align: center;
 	}
 
@@ -882,7 +896,7 @@
 		align-items: center;
 		text-decoration: none;
 		color: black;
-		font-size: 1.25vw;
+		font-size: clamp(10px, 1.25vw, 20px);
 		padding: 5px;
 	}
 
@@ -895,17 +909,17 @@
 	}
 
 	.footer-item .footer-icon img {
-		width: 1.5625vw;
+		width: clamp(10px, 1.5625vw, 20px);
 
 	}
 
 	.footer-statement {
 		text-align: center;
-		font-size: 1.5625vw;
+		font-size: clamp(10px, 1.5625vw, 20px);
 		margin: 5%;
 	}
 
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 576px) {
 		.footer-item.hide {
 			display: none;
 		}
