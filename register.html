@@ -22,88 +22,159 @@
 
     /* header---------- */
     .header {
+      background-color: #fff;
+
+    }
+
+    .header .container {
       display: flex;
-      width: 100%;
       justify-content: space-between;
-      /* border: 1px solid blue; */
+      align-items: center;
+      /* background-color: aqua; */
     }
 
-    .header a {
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000000;
+      margin: 5px;
+
+    }
+
+    .logo-img img {
+      width: 3.90625vw;
+      padding: 5px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: space-between;
+
+    }
+
+    .left-menu,
+    .right-menu {
+      list-style: none;
+      padding: 5px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+
+    }
+
+    .right-menu img {
+      width: clamp(10px, 1.5625vw, 20px);
+    }
+
+    .left-menu li,
+    .right-menu li {
+      margin-left: 20px;
       text-decoration: none;
+    }
+
+    .left-menu li a,
+    .right-menu li a {
       color: black;
-      font-weight: 900;
-    }
-
-    .logo img {
-      height: 50px;
-      width: 50px;
-    }
-
-    .list-lift {
+      text-decoration: none;
+      font-size: clamp(10px, 1.5625vw, 20px);
       display: flex;
-      width: 420px;
-      /* border: 1px solid red; */
-      justify-content: space-around;
-      letter-spacing: 2px;
+      justify-content: center;
+      align-items: center;
     }
 
-    .list-right {
-      display: flex;
-      width: 350px;
-      justify-content: space-around;
-      line-height: 50px;
-      letter-spacing: 2px;
-      font-size: 20px;
-    }
-
-    .lift-text {
-      line-height: 50px;
-      transition: .5S
-    }
-    .lift-text:hover {
-      padding:0 5px;
-      font-size: 24px;
-    }
-
-		.lift-text a:hover{
-			color: #0296D4;
-		}
-
-    .right-text-first {
+    .right-menu .login-button {
+      width: 6.6785vw;
       background-color: rgba(217, 217, 217, 1);
       border-radius: 30px;
-      width: 80px;
-      height: 40px;
-      margin: auto 0;
       text-align: center;
-      line-height: 40px;
+      padding: 3px 0;
+
     }
 
-    .right-text-second {
+    .right-menu .register-button {
+      width: 6.6785vw;
       background-color: #0296D4;
       border-radius: 30px;
-      width: 80px;
-      height: 40px;
-      margin: auto 0;
       text-align: center;
-      line-height: 40px;
+      padding: 3px 0;
     }
 
-    .right-text-second a {
+    .right-menu .register-button a {
       color: #fff;
     }
 
-    .right-icon img {
-      height: 20px;
-      width: 20px;
-      margin: 0 auto;
+    @media screen and (max-width: 576px) {
+
+      .left-menu,
+      .right-menu {
+        display: none;
+        position: absolute;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo-img img {
+        min-width: 30px;
+      }
+
+
+      .menu {
+        display: block;
+
+      }
+
+      .menu-icon {
+        display: block;
+        position: relative;
+      }
+
+      .menu.active .left-menu,
+      .menu.active .right-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15vw;
+        background-color: #F2F3F7;
+        height: 40vw;
+        z-index: 2;
+      }
+
+      .menu.active .right-menu {
+        position: absolute;
+        top: 5%;
+        right: 0%;
+        border-radius: 0 30px 30px 0;
+      }
+
+      .menu.active .left-menu {
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        border-radius: 30px 0 0 30px;
+      }
+
+      .left-menu li,
+      .right-menu li {
+        padding: 1vw;
+        margin: auto;
+      }
     }
 
-    .v-line {
-      border-left: 2px solid black;
-    }
-
-    /* ---login--- */
+    /* ---register--- */
     .section-register {
       margin: 0 auto;
       background-color: #F2F3F7;
@@ -119,73 +190,69 @@
     }
 
     .circle-big img {
-      width: 450px;
-      height: 450px;
+      width: clamp(100px, 23vw, 320px);
       position: absolute;
-      top: -470px;
-      left: 480px;
+      top: 40%;
+      left: 75%;
       z-index: 10;
     }
 
     .circle-middle img {
-      width: 220px;
-      height: 220px;
+      width: clamp(80px, 15vw, 180px);
       position: absolute;
-      top: -458px;
-      left: 373px;
-
+      top: 31%;
+      left: 70%;
+      z-index: 8;
     }
 
     .circle-small img {
-      width: 100px;
-      height: 100px;
+      width: clamp(50px, 7vw, 100px);
       position: absolute;
-      top: 201px;
-      left: 51px;
+      top: 123%;
+      left: 11%;
     }
-
 
 
 
     .section-register .container {
-      width: 1200px;
-      height: 1000px;
+      width: 100%;
       margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
 
-
     }
 
     .register-item {
-      width: 600px;
-      height: 600px;
+      width: 700px;
+      height: 700px;
       background-color: #7DD9F2;
-      border-radius: 300px;
+      border-radius: 50%;
       display: flex;
-      justify-content: s;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
+      margin: 10%;
+      position: relative;
     }
 
     .register-item h2 {
       font-size: 36px;
-      padding-top: 20px;
       font-weight: 600;
+      margin-bottom: 60px;
     }
 
     .input-list {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      position: relative;
+
     }
 
     .group {
       display: flex;
       flex-direction: column;
-      margin: 7px;
+      margin: 5px;
     }
 
     .input-list label {
@@ -202,20 +269,8 @@
       padding-left: 15px;
     }
 
-    .group button {
-      background-color: #fff;
-      color: black;
-      width: 70px;
-      height: 40px;
-      border-radius: 30px;
-      position: absolute;
-      top: 265px;
-      right: -85px;
-      border: none;
-      font-weight: 600;
-    }
-    .group button:active{
-      background-color:#0296D4;
+    .group button:active {
+      background-color: #0296D4;
     }
 
     .register-item p {
@@ -237,19 +292,234 @@
       font-weight: 600;
       font-size: 20px;
     }
-    .register-button button:active{
-      background-color:#0296D4;
+
+    .register-button button:active {
+      background-color: #0296D4;
+    }
+
+    @media screen and (min-width: 1280px) {
+      .register-item {
+        width: 700px;
+        height: 700px;
+        background-color: #7DD9F2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10%;
+        position: relative;
+      }
+
+      .group {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+      }
+
+      .circle-big img {
+        width: clamp(100px, 26vw, 300px);
+        position: absolute;
+        top: 40%;
+        left: 75%;
+        z-index: 10;
+      }
+
+      .circle-middle img {
+        width: clamp(80px, 14vw, 180px);
+        position: absolute;
+        top: 31%;
+        left: 70%;
+        z-index: 8;
+      }
+
+      .circle-small img {
+        width: clamp(50px, 6vw, 90px);
+        position: absolute;
+        top: 123%;
+        left: 11%;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+
+      .circle-big,
+      .circle-middle,
+      .circle-small {
+        display: none;
+      }
+
+      .register-item {
+        width: 77vw;
+        height: 77vw;
+        background-color: #7DD9F2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10%;
+        position: relative;
+      }
+
+      .register-item h2 {
+        font-size: 3.6vw;
+        font-weight: 600;
+        margin-bottom: 2vw;
+      }
+
+      .group {
+        display: flex;
+        flex-direction: column;
+        margin: 2px;
+      }
+
+      .group input {
+        width: 30vw;
+        border-radius: 30px;
+        line-height: 1.5;
+        border: none;
+        padding-left: 10px;
+        margin: 1vw;
+      }
+
+      .group label {
+        font-size: 2.4vw;
+        font-weight: 600;
+      }
+
+      .register-button {
+        text-align: center;
+
+      }
+
+      .register-item p {
+        width: 36vw;
+        font-size: 1.5vw;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin: 10px;
+      }
+
+      .register-button button {
+        background-color: #fff;
+        color: black;
+        width: 8.8vw;
+        height: 4vw;
+        border-radius: 30px;
+        margin: 10px 5px;
+        border: none;
+        font-weight: 600;
+        font-size: 2.222222vw;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .register-item {
+        width: 77vw;
+        height: 77vw;
+        background-color: #7DD9F2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10%;
+        position: relative;
+      }
+
+      .register-item h2 {
+        font-size: 3.6vw;
+        font-weight: 600;
+        margin-bottom: 1vw;
+      }
+
+      .group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 3% 0;
+      }
+
+
+      .group input {
+        width: 30vw;
+        border-radius: 30px;
+        line-height: 1;
+        border: none;
+        padding-left: 10px;
+        margin: 0.5vw;
+      }
+
+      .group label {
+        font-size: 2.4vw;
+        font-weight: 600;
+      }
+
+      .register-button {
+        text-align: center;
+
+      }
+
+      .register-item p {
+        width: 36vw;
+        font-size: 1.5vw;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin: 5px;
+      }
+
+      .register-button button {
+        background-color: #fff;
+        color: black;
+        width: 8.8vw;
+        height: 4vw;
+        border-radius: 30px;
+        margin: 10px 5px;
+        border: none;
+        font-weight: 600;
+        font-size: 2.222222vw;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .register-item {
+        width: clamp(300px, 77vw, 500px);
+        height: clamp(300px, 77vw, 500px);
+        background-color: #7DD9F2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 10%;
+        position: relative;
+      }
+
+      .register-button button {
+        background-color: #fff;
+        color: black;
+        width: 8.8vw;
+        height: 4vw;
+        border-radius: 30px;
+        margin: 0 5px;
+        border: none;
+        font-weight: 600;
+        font-size: 2.222222vw;
+      }
     }
 
 
     /* ---footer--- */
     .section-footer {
       margin: 0 auto;
-      margin-top: 60px;
+      margin: 5%;
     }
 
     .section-footer .container {
-      width: 1200px;
+      max-width: 1200px;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -263,11 +533,12 @@
     }
 
     .footer-item h3 {
-      font-size: 24px;
+      font-size: clamp(12px, 1.875vw, 24px);
       text-align: center;
     }
-    .footer-item nav{
-		margin: 10px 0;
+
+    .footer-item nav {
+      margin: 10px 0;
     }
 
     .footer-item nav a {
@@ -276,7 +547,7 @@
       align-items: center;
       text-decoration: none;
       color: black;
-      font-size: 16px;
+      font-size: clamp(10px, 1.25vw, 20px);
       padding: 5px;
     }
 
@@ -289,48 +560,69 @@
     }
 
     .footer-item .footer-icon img {
-      width: 20px;
-      height: 20px;
+      width: clamp(10px, 1.5625vw, 20px);
 
     }
 
     .footer-statement {
       text-align: center;
-      font-size: 20px;
-      margin: 50px 0 20px;
+      font-size: clamp(10px, 1.5625vw, 20px);
+      margin: 5%;
+    }
+
+    @media screen and (max-width: 576px) {
+      .footer-item.hide {
+        display: none;
+      }
+
+      .footer-item h3 {
+        font-size: 12px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="topics">
-    <div class="header">
-      <div class="list-lift">
+    <nav class="header">
+      <div class="container">
         <div class="logo">
-          <a href="index.html"><img src="./img/logo_0328.png" alt=""></a>
+          <div class="logo-img"><a href="index.html"><img src="./img/logo_0328.png" alt=""></a></div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </div>
-        <div class="lift-text"><a href="Buying .html">一鍵買賣</a></div>
-        <div class="lift-text"><a href="exchange.html">交易▼</a></div>
-        <div class="lift-text"><a href="#">理財▼</a></div>
-        <div class="lift-text"><a href="aboutus.html">關於我們</a></div>
+        <div class="menu">
+          <ul class="left-menu">
+            <li><a href="Buying .html">一鍵買賣</a></li>
+            <li><a href="exchange.html">交易</a></li>
+            <li><a href="#">理財</a></li>
+            <li><a href="aboutus.html">關於我們</a></li>
+          </ul>
+          <ul class="right-menu">
+            <li>
+              <div class="login-button"><a href="login.html">登入</a></div>
+            </li>
+            <li>
+              <div class="register-button"><a href="register.html">註冊</a></div>
+            </li>
+            <li><a href="#"><img src="./img/Vector.png" alt=""></a></li>
+            <li><a href="#"><img src=".//img/Vector (1).png" alt=""></a></li>
+            <li><a href="#"><img src="./img/Vector (2).png" alt=""></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="list-right">
-        <div class="right-text-first"><a href="login.html">登入</a></div>
-        <div class="right-text-second"><a href="register.html">註冊</a></div>
-        <div class="v-line"></div>
-
-        <div class="right-icon"><a href="#"><img src="./img/Vector.png" alt=""></a></div>
-        <div class="right-icon"><a href="#"><img src="./img/Vector (1).png" alt=""></a></div>
-        <div class="right-icon"><a href="#"><img src="./img/Vector (2).png" alt=""></a></div>
-      </div>
-    </div>
+    </nav>
     <div class="section section-register">
       <div class="container">
-        <div class="circle">
-          <div class="circle-big"><img src="./img/大圓.svg" alt=""></div>
-          <div class="circle-middle"><img src="./img/中圓.svg" alt=""></div>
-          <div class="circle-small"><img src="./img/小圓.svg" alt=""></div>
-        </div>
+
+        <div class="circle-big"><img src="./img/大圓.svg" alt=""></div>
+        <div class="circle-middle"><img src="./img/中圓.svg" alt=""></div>
+        <div class="circle-small"><img src="./img/小圓.svg" alt=""></div>
+
 
         <div class="register-item">
           <h2>註冊會員</h2>
@@ -349,7 +641,7 @@
             <div class="group">
               <label for="user-email">email</label>
               <input type="email" id="user-email" name="user-email">
-              <button>驗證信箱</button>
+
             </div>
             <div class="group">
               <label for="referrer id">密碼</label>
@@ -369,7 +661,7 @@
     <div class="section section-footer">
       <div class="container">
         <div class="footer-list">
-          <div class="footer-item">
+          <div class="footer-item hide">
             <h3>集團資訊</h3>
             <nav>
               <a href="#">官方消息</a>
@@ -379,17 +671,17 @@
               <a href="#">人才招募</a>
             </nav>
           </div>
-          <div class="footer-item">
+          <div class="footer-item  hide">
             <h3>產品服務</h3>
             <nav>
               <a href="#">推薦獎勵</a>
-							<a href="Buying .html">一鍵買賣</a>
-							<a href="exchange.html">專業交易</a>
-							<a href="#">代幣發售</a>
-							<a href="#">系統狀態</a>
+              <a href="Buying .html">一鍵買賣</a>
+              <a href="exchange.html">專業交易</a>
+              <a href="#">代幣發售</a>
+              <a href="#">系統狀態</a>
             </nav>
           </div>
-          <div class="footer-item">
+          <div class="footer-item hide">
             <h3>客服中心</h3>
             <nav>
               <a href="#">全站公告</a>
@@ -399,7 +691,7 @@
               <a href="#">限制與費用</a>
             </nav>
           </div>
-          <div class="footer-item">
+          <div class="footer-item hide">
             <h3>新手指南</h3>
             <nav>
               <a href="#">新手教學</a>
@@ -425,5 +717,11 @@
     </div>
   </div>
 </body>
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
+</script>
 
 </html>
