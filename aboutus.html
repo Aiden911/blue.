@@ -8,13 +8,14 @@
   </title>
   <link rel="stylesheet" href="reset.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 
   <style>
-      body {
-		font-family: "Noto Sans TC", sans-serif;
-	}
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+    }
+
     .topics {
       margin: 0 auto;
       width: 100%;
@@ -22,113 +23,185 @@
 
     /* header---------- */
     .header {
+      background-color: #fff;
+
+    }
+
+    .header .container {
       display: flex;
-      width: 100%;
       justify-content: space-between;
-      /* border: 1px solid blue; */
+      align-items: center;
+      /* background-color: aqua; */
     }
 
-    .header a {
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000000;
+      margin: 5px;
+
+    }
+
+    .logo-img img {
+      width: 3.90625vw;
+      padding: 5px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: space-between;
+
+    }
+
+    .left-menu,
+    .right-menu {
+      list-style: none;
+      padding: 5px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+
+    }
+
+    .right-menu img {
+      width: clamp(10px, 1.5625vw, 20px);
+    }
+
+    .left-menu li,
+    .right-menu li {
+      margin-left: 20px;
       text-decoration: none;
+    }
+
+    .left-menu li a,
+    .right-menu li a {
       color: black;
-      font-weight: 600;
-    }
-
-    .logo img {
-      height: 50px;
-      width: 50px;
-    }
-
-    .list-lift {
+      text-decoration: none;
+      font-size: clamp(10px, 1.5625vw, 20px);
       display: flex;
-      width: 420px;
-      /* border: 1px solid red; */
-      justify-content: space-around;
-      letter-spacing: 2px;
+      justify-content: center;
+      align-items: center;
     }
 
-    .list-right {
-      display: flex;
-      width: 350px;
-      justify-content: space-around;
-      line-height: 50px;
-      letter-spacing: 2px;
-      font-size: 20px;
-    }
-
-    .lift-text {
-      line-height: 50px;
-      transition: .5S
-    }
-    .lift-text:hover {
-      padding:0 5px;
-      font-size: 24px;
-    }
-
-		.lift-text a:hover{
-			color: #0296D4;
-		}
-    .right-text-first {
+    .right-menu .login-button {
+      width: 6.6785vw;
       background-color: rgba(217, 217, 217, 1);
       border-radius: 30px;
-      width: 80px;
-      height: 40px;
-      margin: auto 0;
       text-align: center;
-      line-height: 40px;
+      padding: 3px 0;
+
     }
 
-    .right-text-second {
+    .right-menu .register-button {
+      width: 6.6785vw;
       background-color: #0296D4;
       border-radius: 30px;
-      width: 80px;
-      height: 40px;
-      margin: auto 0;
       text-align: center;
-      line-height: 40px;
+      padding: 3px 0;
     }
 
-    .right-text-second a {
+    .right-menu .register-button a {
       color: #fff;
     }
 
-    .right-icon img {
-      height: 20px;
-      width: 20px;
-      margin: 0 auto;
-    }
+    @media screen and (max-width: 576px) {
 
-    .v-line {
-      border-left: 2px solid black;
+      .left-menu,
+      .right-menu {
+        display: none;
+        position: absolute;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo-img img {
+        min-width: 30px;
+      }
+
+
+      .menu {
+        display: block;
+
+      }
+
+      .menu-icon {
+        display: block;
+        position: relative;
+      }
+
+      .menu.active .left-menu,
+      .menu.active .right-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15vw;
+        background-color: #F2F3F7;
+        height: 40vw;
+        z-index: 2;
+      }
+
+      .menu.active .right-menu {
+        position: absolute;
+        top: 5%;
+        right: 0%;
+        border-radius: 0 30px 30px 0;
+      }
+
+      .menu.active .left-menu {
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        border-radius: 30px 0 0 30px;
+      }
+
+      .left-menu li,
+      .right-menu li {
+        padding: 1vw;
+        margin: auto;
+      }
     }
 
     /* ---about--- */
     .section-about {
-      margin: 0 auto;
       background-color: #F2F3F7;
-      background-image: url(./img/半圓.svg);
-      background-size: 600px;
-      background-repeat: no-repeat;
-      background-position: top 430px right 1309px;;
+      padding: 5%;
     }
 
     .section-about .container {
-      width: 900px;
-      margin: 0 auto;
+      width: 100%;
+      margin: auto;
 
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .about h1 {
       text-align: center;
       font-size: 36px;
-      padding-top: 140px;
       font-weight: 600;
+      padding: 2%;
     }
 
-    .about li {
+    .about-item li {
       list-style: none;
-      padding: 5px;
-
     }
 
     .about-text h2 {
@@ -137,55 +210,83 @@
       font-weight: 600;
     }
 
+
+    .about-pic {
+      width: 200px;
+    }
+
+    .about-pic img {
+      width: 100%;
+    }
+
     .about-text li {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
-      line-height: 25px;
+      line-height: 30px;
     }
 
     .about-text {
-      width: 900px;
+      width: 600PX;
+      margin: 2%;
     }
 
-    .about-assets {
-      text-align: center;
-      padding: 60px 0  ;
-    }
-
-    .about-assets h2 {
-      font-size: 24px;
-      font-weight: 600;
-    }
-
-    .assets-list {
+    .about-item {
       display: flex;
-      justify-content: space-between;
-
-    }
-
-    .assets-item {
-      font-size: 20px;
-      height: 200px;
-      width: 220px;
-      background-color: #7DD9F2;
-      display: flex;
-      text-align: start;
       align-items: center;
-      border-radius: 30px;
-      margin-top: 70px;
-      padding: 10px;
-      font-weight: 600;
-      line-height: 30px;
+      margin: 2%;
+
+      box-shadow: 5px 5px 5px #888888;
+    }
+
+    @media screen and (max-width: 900px) {
+      .about h1 {
+        font-size: clamp(14px, 4vw, 36px);
+      }
+
+      .about-text {
+        width: 66vw;
+      }
+
+      .about-pic {
+        width: 25%;
+      }
+
+      .about-text h2 {
+        font-size: clamp(12px, 2.6vw, 24px);
+        padding: 5% 0;
+      }
+
+      .about-text li {
+        font-size: clamp(10px, 2vw, 20px);
+        line-height: 150%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .about-item {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+      }
+
+      .about-text h2 {
+        text-align: center;
+      }
+      .about-text li {
+        font-size: clamp(10px, 2vw, 20px);
+        line-height: 180%;
+      }
     }
 
     /* ---footer--- */
     .section-footer {
       margin: 0 auto;
-      margin-top: 60px;
+      margin: 5%;
     }
 
     .section-footer .container {
-      width: 1200px;
+      max-width: 1200px;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -199,11 +300,12 @@
     }
 
     .footer-item h3 {
-      font-size: 24px;
+      font-size: clamp(12px, 1.875vw, 24px);
       text-align: center;
     }
-    .footer-item nav{
-		margin: 10px 0;
+
+    .footer-item nav {
+      margin: 10px 0;
     }
 
     .footer-item nav a {
@@ -212,7 +314,7 @@
       align-items: center;
       text-decoration: none;
       color: black;
-      font-size: 16px;
+      font-size: clamp(10px, 1.25vw, 20px);
       padding: 5px;
     }
 
@@ -225,80 +327,121 @@
     }
 
     .footer-item .footer-icon img {
-      width: 20px;
-      height: 20px;
+      width: clamp(10px, 1.5625vw, 20px);
 
     }
 
     .footer-statement {
       text-align: center;
-      font-size: 20px;
-      margin: 50px 0 20px;
+      font-size: clamp(10px, 1.5625vw, 20px);
+      margin: 5%;
+    }
+
+    @media screen and (max-width: 576px) {
+      .footer-item.hide {
+        display: none;
+      }
+
+      .footer-item h3 {
+        font-size: 12px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="topics">
-    <div class="header">
-      <div class="list-lift">
+    <nav class="header">
+      <div class="container">
         <div class="logo">
-          <a href="index.html"><img src="./img/logo_0328.png" alt=""></a>
+          <div class="logo-img"><a href="index.html"><img src="./img/logo_0328.png" alt=""></a></div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </div>
-        <div class="lift-text"><a href="Buying .html">一鍵買賣</a></div>
-        <div class="lift-text"><a href="exchange.html">交易▼</a></div>
-        <div class="lift-text"><a href="#">理財▼</a></div>
-        <div class="lift-text"><a href="aboutus.html">關於我們</a></div>
+        <div class="menu">
+          <ul class="left-menu">
+            <li><a href="Buying .html">一鍵買賣</a></li>
+            <li><a href="exchange.html">交易</a></li>
+            <li><a href="#">理財</a></li>
+            <li><a href="aboutus.html">關於我們</a></li>
+          </ul>
+          <ul class="right-menu">
+            <li>
+              <div class="login-button"><a href="login.html">登入</a></div>
+            </li>
+            <li>
+              <div class="register-button"><a href="register.html">註冊</a></div>
+            </li>
+            <li><a href="#"><img src="./img/Vector.png" alt=""></a></li>
+            <li><a href="#"><img src=".//img/Vector (1).png" alt=""></a></li>
+            <li><a href="#"><img src="./img/Vector (2).png" alt=""></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="list-right">
-        <div class="right-text-first"><a href="login.html">登入</a></div>
-        <div class="right-text-second"><a href="register.html">註冊</a></div>
-        <div class="v-line"></div>
-
-        <div class="right-icon"><a href="#"><img src="./img/Vector.png" alt=""></a></div>
-        <div class="right-icon"><a href="#"><img src="./img/Vector (1).png" alt=""></a></div>
-        <div class="right-icon"><a href="#"><img src="./img/Vector (2).png" alt=""></a></div>
-      </div>
-    </div>
+    </nav>
     <div class="section section-about">
       <div class="container">
         <div class="about">
           <h1>關於Blue star</h1>
-          <div class="about-text">
-            <h2>Blue Star</h2>
-            <ul>
-              <li>Blue Star 是由藍星團隊所開發。</li>
-              <li>藍星團隊致力於推廣台灣數位貨幣，為提供顧客全方位的優質服務與品牌承諾而努力。而我們的期許是能讓數位貨幣的交易更容易、使用更方便、應用更全面。</li>
-              <li>2017年因應客戶與市場發展趨勢，藍星團隊開始著手規劃與開發虛擬通貨交易平台-Blue Star，希望能滿足客戶更快速、經濟的交易需求。</li>
-            </ul>
-          </div>
-          <div class="about-text">
-            <h2>Blue Star佳績</h2>
-            <ul>
-              <li>比特幣電子錢包台灣佔有率 No.1</li>
-              <li>全球比特幣電子錢包交易量 Top5</li>
-              <li>保護您的資產，我們竭盡全力</li>
-              <li>服務涵蓋全台通路超過3000家</li>
-              <li>超過200,000會員與您一起使用</li>
-            </ul>
-          </div>
-          <div class="about-assets">
-            <h2>保護您的資產，我們竭盡全力</h2>
-            <div class="assets-list">
-              <div class="assets-item">ISO 27001 資安認證國際級專業認證，保護您的資料安全。</div>
-              <div class="assets-item">完成台灣洗錢防制聲明守法合規，提供您最安心的交易環境。</div>
-              <div class="assets-item">台幣信託 & 虛幣保險我們懂您的擔憂，雙重保護機制最安心。</div>
+          <div class="about-item">
+            <div class="about-text">
+              <h2>Blue Star</h2>
+              <ul>
+                <li>Blue Star 是由藍星團隊所開發。</li>
+                <li>藍星貨幣交易所是一個專業的加密貨幣交易平台，致力於為全球用戶提供安全、穩定、高效的交易服務。我們擁有豐富的交易對和多元化的交易工具，讓您可以輕鬆參與加密貨幣市場，快速實現交易目標。</li>
+              </ul>
             </div>
-
+            <div class="about-pic">
+              <img src="./img/logo_03.png" alt="">
+            </div>
           </div>
-
+          <div class="about-item">
+            <div class="about-text">
+              <h2>Blue Star佳績</h2>
+              <ol>
+                <li>
+                  1. 穩固的財務狀況和良好的市場表現，為用戶提供穩健的交易環境。
+                </li>
+                <li>
+                  2. 廣泛的交易品種和市場覆蓋，滿足不同用戶的交易需求和投資策略。
+                </li>
+                <li>
+                  3. 積極參與社區和行業活動，建立起良好的品牌形象和社交影響力。
+                </li>
+                <li>
+                  4. 積極投入研發，不斷推出新功能，提升平台的競爭力和吸引力。
+                </li>
+              </ol>
+            </div>
+            <div class="about-pic">
+              <img src="./img/Award-unscreen.gif" alt="">
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-text">
+              <h2>保護您的資產，我們竭盡全力</h2>
+              <ul>
+                <li>1. ISO 27001 資安認證國際級專業認證，保護您的資料安全。</li>
+                <li>2. 完成台灣洗錢防制聲明守法合規，提供您最安心的交易環境。</li>
+                <li>3. 台幣信託 & 虛幣保險我們懂您的擔憂，雙重保護機制最安心。</li>
+              </ul>
+            </div>
+            <div class="about-pic">
+              <img src="./img/hacker.svg" alt="">
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
     <div class="section section-footer">
       <div class="container">
         <div class="footer-list">
-          <div class="footer-item">
+          <div class="footer-item hide">
             <h3>集團資訊</h3>
             <nav>
               <a href="#">官方消息</a>
@@ -308,17 +451,17 @@
               <a href="#">人才招募</a>
             </nav>
           </div>
-          <div class="footer-item">
+          <div class="footer-item  hide">
             <h3>產品服務</h3>
             <nav>
               <a href="#">推薦獎勵</a>
-							<a href="Buying .html">一鍵買賣</a>
-							<a href="exchange.html">專業交易</a>
-							<a href="#">代幣發售</a>
-							<a href="#">系統狀態</a>
+              <a href="Buying .html">一鍵買賣</a>
+              <a href="exchange.html">專業交易</a>
+              <a href="#">代幣發售</a>
+              <a href="#">系統狀態</a>
             </nav>
           </div>
-          <div class="footer-item">
+          <div class="footer-item hide">
             <h3>客服中心</h3>
             <nav>
               <a href="#">全站公告</a>
@@ -328,7 +471,7 @@
               <a href="#">限制與費用</a>
             </nav>
           </div>
-          <div class="footer-item">
+          <div class="footer-item hide">
             <h3>新手指南</h3>
             <nav>
               <a href="#">新手教學</a>
@@ -352,6 +495,13 @@
         </div>
       </div>
     </div>
+  </div>
 </body>
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
+</script>
 
 </html>
