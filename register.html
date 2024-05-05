@@ -22,158 +22,166 @@
 
     /* header---------- */
     .header {
-      background-color: #fff;
+			background-color: #fff;
 
-    }
+		}
 
-    .header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      /* background-color: aqua; */
-    }
+		.header .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			/* background-color: aqua; */
+		}
 
-    .menu-icon {
-      display: none;
-      cursor: pointer;
+		.menu-icon {
+			display: none;
+			cursor: pointer;
 
-    }
+		}
 
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: #000000;
-      margin: 5px;
+		.bar {
+			width: 25px;
+			height: 3px;
+			background-color: #000000;
+			margin: 5px;
 
-    }
+		}
 
-    .logo-img img {
-      width: 3.90625vw;
-      padding: 5px;
-    }
+		.logo-img img {
+			width: 3.90625vw;
+			padding: 5px;
+		}
 
-    .menu {
-      display: flex;
-      align-items: center;
-      flex: 1;
-      justify-content: space-between;
+		.menu {
+			display: flex;
+			align-items: center;
+			flex: 1;
+			justify-content: space-between;
 
-    }
+		}
 
-    .left-menu,
-    .right-menu {
-      list-style: none;
-      padding: 5px;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-
-
-    }
-
-    .right-menu img {
-      width: clamp(10px, 1.5625vw, 20px);
-    }
-
-    .left-menu li,
-    .right-menu li {
-      margin-left: 20px;
-      text-decoration: none;
-    }
-
-    .left-menu li a,
-    .right-menu li a {
-      color: black;
-      text-decoration: none;
-      font-size: clamp(10px, 1.5625vw, 20px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .right-menu .login-button {
-      width: 6.6785vw;
-      background-color: rgba(217, 217, 217, 1);
-      border-radius: 30px;
-      text-align: center;
-      padding: 3px 0;
-
-    }
-
-    .right-menu .register-button {
-      width: 6.6785vw;
-      background-color: #0296D4;
-      border-radius: 30px;
-      text-align: center;
-      padding: 3px 0;
-    }
-
-    .right-menu .register-button a {
-      color: #fff;
-    }
-
-    @media screen and (max-width: 576px) {
-
-      .left-menu,
-      .right-menu {
-        display: none;
-        position: absolute;
-      }
-
-      .logo {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      .logo-img img {
-        min-width: 30px;
-      }
+		.left-menu,
+		.right-menu {
+			list-style: none;
+			padding: 5px;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 
-      .menu {
-        display: block;
+		}
 
-      }
+		.right-menu img {
+			width: clamp(10px, 1.5625vw, 20px);
+		}
 
-      .menu-icon {
-        display: block;
-        position: relative;
-      }
+		.left-menu li,
+		.right-menu li {
+			margin-left: 20px;
+			text-decoration: none;
+		}
 
-      .menu.active .left-menu,
-      .menu.active .right-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 15vw;
-        background-color: #F2F3F7;
-        height: 40vw;
-        z-index: 2;
-      }
+		.left-menu li a,
+		.right-menu li a {
+			color: black;
+			text-decoration: none;
+			font-size: clamp(10px, 1.5625vw, 20px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-      .menu.active .right-menu {
-        position: absolute;
-        top: 5%;
-        right: 0%;
-        border-radius: 0 30px 30px 0;
-      }
+		.right-menu .login-button {
+			width: 6.6785vw;
+			background-color: rgba(217, 217, 217, 1);
+			border-radius: 30px;
+			text-align: center;
+			padding: 8% 0;
 
-      .menu.active .left-menu {
-        position: absolute;
-        top: 5%;
-        right: 15%;
-        border-radius: 30px 0 0 30px;
-      }
+		}
 
-      .left-menu li,
-      .right-menu li {
-        padding: 1vw;
-        margin: auto;
-      }
-    }
+		.right-menu .register-button {
+			width: 6.6785vw;
+			background-color: #0296D4;
+			border-radius: 30px;
+			text-align: center;
+			padding: 8% 0;
+		}
 
+		.right-menu .register-button a {
+			color: #fff;
+		}
+
+		@media screen and (max-width: 576px) {
+
+			.left-menu,
+			.right-menu {
+				display: none;
+				position: absolute;
+			}
+
+			.logo {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			.logo-img img {
+				min-width: 30px;
+			}
+
+
+			.menu {
+				display: block;
+
+			}
+
+			.menu-icon {
+				display: block;
+				position: relative;
+			}
+
+			.menu.active .left-menu,
+			.menu.active .right-menu {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 15vw;
+				background-color: #F2F3F7;
+				height: 40vw;
+				z-index: 2;
+			}
+
+			.menu.active .right-menu {
+				position: absolute;
+				top: 5%;
+				right: 0%;
+				border-radius: 0 30px 30px 0;
+			}
+
+			.menu.active .left-menu {
+				position: absolute;
+				top: 5%;
+				right: 15%;
+				border-radius: 30px 0 0 30px;
+			}
+
+			.left-menu li,
+			.right-menu li {
+				padding: 1vw;
+				margin: auto;
+			}
+			.right-menu .login-button {
+			padding: 3px 0;
+
+		}
+
+		.right-menu .register-button {
+			padding: 3px 0;
+		}
+		}
     /* ---register--- */
     .section-register {
       margin: 0 auto;
