@@ -14,168 +14,251 @@
       font-family: "Noto Sans TC", sans-serif;
     }
 
-    .container {
-      background-color: #F2F3F7;
-      margin: 0 auto;
-    }
-
     /* header---------- */
     .header {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      background-color: #fff;
-      /* border: 1px solid blue; */
-    }
+			background-color: #fff;
 
-    .header a {
-      text-decoration: none;
-      color: black;
+		}
+
+		.header .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			/* background-color: aqua; */
+		}
+
+		.menu-icon {
+			display: none;
+			cursor: pointer;
+
+		}
+
+		.bar {
+			width: 25px;
+			height: 3px;
+			background-color: #000000;
+			margin: 5px;
+
+		}
+
+		.logo-img img {
+			width: 3.90625vw;
+			padding: 5px;
+		}
+
+		.menu {
+			display: flex;
+			align-items: center;
+			flex: 1;
+			justify-content: space-between;
+
+		}
+
+		.left-menu,
+		.right-menu {
+			list-style: none;
+			padding: 5px;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+
+		}
+
+		.right-menu img {
+			width: clamp(10px, 1.5625vw, 20px);
+		}
+
+		.left-menu li,
+		.right-menu li {
+			margin-left: 20px;
+			text-decoration: none;
+		}
+
+		.left-menu li a,
+		.right-menu li a {
+			color: black;
+			text-decoration: none;
+			font-size: clamp(10px, 1.5625vw, 20px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.right-menu .login-button {
+			width: 6.6785vw;
+			background-color: rgba(217, 217, 217, 1);
+			border-radius: 30px;
+			text-align: center;
+			padding: 8% 0;
+
+		}
+
+		.right-menu .register-button {
+			width: 6.6785vw;
+			background-color: #0296D4;
+			border-radius: 30px;
+			text-align: center;
+			padding: 8% 0;
+		}
+
+		.right-menu .register-button a {
+			color: #fff;
+		}
+
+		@media screen and (max-width: 576px) {
+
+			.left-menu,
+			.right-menu {
+				display: none;
+				position: absolute;
+			}
+
+			.logo {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			.logo-img img {
+				min-width: 30px;
+			}
+
+
+			.menu {
+				display: block;
+
+			}
+
+			.menu-icon {
+				display: block;
+				position: relative;
+			}
+
+			.menu.active .left-menu,
+			.menu.active .right-menu {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 15vw;
+				background-color: #F2F3F7;
+				height: 40vw;
+				z-index: 2;
+			}
+
+			.menu.active .right-menu {
+				position: absolute;
+				top: 5%;
+				right: 0%;
+				border-radius: 0 30px 30px 0;
+			}
+
+			.menu.active .left-menu {
+				position: absolute;
+				top: 5%;
+				right: 15%;
+				border-radius: 30px 0 0 30px;
+			}
+
+			.left-menu li,
+			.right-menu li {
+				padding: 1vw;
+				margin: auto;
+			}
+			.right-menu .login-button {
+			padding: 3px 0;
+
+		}
+
+		.right-menu .register-button {
+			padding: 3px 0;
+		}
+		}
+    /* ---------------------- */
+
+    .section-exchange{
+      margin: auto;
+    }
+    .section-exchange .container{
+      width: 100%;
+      margin: auto;
+    }
+    .Currency{
+      display: flex;
+      justify-content: start;
+      margin: 5% 0;
+      
+    }
+    .Currency select {
+      font-size: 20px;
       font-weight: 600;
     }
-    .lift-text a{
-      transition: .5S;
-    }
-    .lift-text a:hover{
-      color: #fff;
-      padding: 0 10px;
-      font-size: 24px;
-    }
-    .logo img {
-      height: 50px;
-      width: 50px;
-
-    }
-
-    .list-lift {
-      display: flex;
-      width: 420px;
-      /* border: 1px solid red; */
-      justify-content: space-around;
-      letter-spacing: 2px;
-    }
-
-    .list-right {
-      display: flex;
-      width: 350px;
-      justify-content: space-around;
-      line-height: 50px;
-      letter-spacing: 2px;
-      font-size: 20px;
-    }
-
-    .lift-text {
-      line-height: 50px;
-    }
-
-    .right-text-first {
-      background-color: rgba(217, 217, 217, 1);
+    #regionSelect{
+      margin-left: 13%;
       border-radius: 30px;
-      width: 80px;
-      height: 40px;
-      margin: auto 0;
       text-align: center;
-      line-height: 40px;
+      border: 2px solid black;
     }
-
-    .right-text-second {
-      background-color: #0296D4;
+    #displayValue{
+      margin-left: 3%;
+      border: 2px solid black;
+      padding: 1%;
       border-radius: 30px;
-      width: 80px;
-      height: 40px;
-      margin: auto 0;
-      text-align: center;
-      line-height: 40px;
-    }
-
-    .right-text-second a {
-      color: #fff;
-    }
-
-    .right-icon img {
-      height: 20px;
-      width: 20px;
-      margin: 0 auto;
-    }
-
-    .v-line {
-      border-left: 2px solid black;
-    }
-
-    /* ---------------------- */
-    .category {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .currency {
-      margin: 20px;
-      font-size: 32px;
-      color: black;
-
-    }
-
-    .price {
-      border: 1px solid black;
-      border-radius: 30px;
-      padding: 5px;
-      display: flex;
-      justify-content: space-evenly;
-      width: 60%;
-    }
-
-    .price p {
-      margin: 10px;
       font-size: 18px;
-      color: black;
     }
-
+    @media screen and (max-width: 1100px) {
+      .Currency select {
+      font-size: clamp(14px,1.8vw,20px);
+    }
+    #displayValue{
+      font-size: clamp(12px,1.6vw,18px);
+    }
+    }
     /* ---貨幣 */
     .chart {
       display: flex;
       justify-content: center;
-      margin: 30px;
+      width: 100%;
     }
 
     .chart-date {
-      width: 20%;
       display: flex;
       justify-content: flex-end;
+      
     }
 
     .chart-date.rtl {
-      width: 20%;
       display: flex;
       justify-content: flex-start;
     }
 
     .chart-date .date-img {
-      width: 54.7%;
-      height: 100%;
+      
       object-fit: contain;
       object-position: center center;
     }
 
     .chart-date .date-img img {
       width: 100%;
-      height: 500px;
+      
     }
 
     .chart-Graph {
-      width: 60%;
+      
       display: flex;
       flex-direction: column;
     }
 
     .chart-Graph .Graph-img {
       width: 100%;
-      height: 57.1%;
+      
     }
 
     .chart-Graph .Graph-img img {
       width: 100%;
-      height: 400px;
+      
     }
 
     /* ---圖 */
@@ -220,7 +303,7 @@
       border: 1px solid black;
       border-radius: 30px;
       line-height: 3;
-      color: #fff;
+      color: #000000;
       padding-left: 15px;
     }
     
@@ -276,38 +359,51 @@
 <body>
   <div section section-exchange>
     <div class="container">
-      <div class="header">
-        <div class="list-lift">
+      <nav class="header">
+        <div class="container">
           <div class="logo">
-            <a href="index.html"><img src="./img/logo_0328.png" alt=""></a>
+            <div class="logo-img"><a href="index.html"><img src="./img/logo_0328.png" alt=""></a></div>
+            <div class="menu-icon" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
           </div>
-          <div class="lift-text"><a href="Buying .html">一鍵買賣</a></div>
-          <div class="lift-text"><a href="exchange.html">交易▼</a></div>
-          <div class="lift-text"><a href="#">理財▼</a></div>
-          <div class="lift-text"><a href="aboutus.html">關於我們</a></div>
+          <div class="menu">
+            <ul class="left-menu">
+              <li><a href="Buying .html">一鍵買賣</a></li>
+              <li><a href="exchange.html">交易</a></li>
+              <li><a href="#">理財</a></li>
+              <li><a href="aboutus.html">關於我們</a></li>
+            </ul>
+            <ul class="right-menu">
+              <li>
+                <div class="login-button"><a href="login.html">登入</a></div>
+              </li>
+              <li>
+                <div class="register-button"><a href="register.html">註冊</a></div>
+              </li>
+              <li><a href="#"><img src="./img/Vector.png" alt=""></a></li>
+              <li><a href="#"><img src=".//img/Vector (1).png" alt=""></a></li>
+              <li><a href="#"><img src="./img/Vector (2).png" alt=""></a></li>
+            </ul>
+          </div>
         </div>
-        <div class="list-right">
-          <div class="right-text-first"><a href="login.html">登入</a></div>
-          <div class="right-text-second"><a href="register.html">註冊</a></div>
-          <div class="v-line"></div>
-
-          <div class="right-icon"><a href="#"><img src="./img/鈴鐺 藍色.svg" alt=""></a></div>
-          <div class="right-icon"><a href="#"><img src="./img/客服 藍色.svg" alt=""></a></div>
-          <div class="right-icon"><a href="#"><img src="./img/Q 藍色.svg" alt=""></a></div>
-        </div>
-      </div>
-      <div class="category">
-        <div class="currency">BTC▼</div>
-        <div class="price">
-          <p>即時價格 2,077,095 </p>
-          <p>24h漲跌 2,077,095 +0% </p>
-          <p>24h最高價 2,097,095</p>
-          <p>24h最低價 2,000,095</p>
-        </div>
+      </nav>
+      <div class="Currency">
+        <select name="region" id="regionSelect" onchange="updateDisplay()">
+          <option value="default">幣別</option>
+          <option value="BTC">BTC</option>
+          <option value="USDT">USTD</option>
+          <option value="USDC">USDC</option>
+          <option value="DOGC">DOGC</option>
+        </select>
+    
+        <div id="displayValue">即時價格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h漲跌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+0%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h最高價&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h最低價</div>
       </div>
       <div class="chart">
         <div class="chart-date">
-          <div class="date-img"><img src="./img/專題圖檔19.png" alt=""></div>
+          <div class="date-img"><img src="./img/left 1.svg" alt=""></div>
         </div>
         <div class="chart-Graph">
           <div class="Graph-img">
@@ -335,7 +431,7 @@
           </div>
         </div>
         <div class="chart-date rtl">
-          <div class="date-img"><img src="./img/專題圖檔18.png" alt=""></div>
+          <div class="date-img"><img src="./img/right 1.svg" alt=""></div>
         </div>
       </div>
       <div class="record">
@@ -351,5 +447,39 @@
   </div>
 
 </body>
+<script>
+  function toggleMenu() {
+    var menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
 
+  function updateDisplay() {
+    let selectElement = document.getElementById("regionSelect");
+    let displayElement = document.getElementById("displayValue");
+    let selectedValue = selectElement.value;
+
+    // 顯示的內容
+    switch (selectedValue) {
+      case "default":
+        displayElement.textContent = "即時價格               24h漲跌           +0%     24h最高價               24h最低價           ";
+        break;
+      case "BTC":
+        displayElement.textContent = "即時價格 2,077,095     24h漲跌 2,077,095 +0%     24h最高價 2,097,095     24h最低價 2,000,095 ";
+        displayElement.style.whiteSpace = "pre-wrap";
+        break;
+      case "USDT":
+        displayElement.textContent = "即時價格 32.544        24h漲跌 32.544        +0%     24h最高價 32.544        24h最低價 32.544        ";
+        displayElement.style.whiteSpace = "pre-wrap";
+        break;
+      case "USDC":
+        displayElement.textContent = "即時價格 32.69          24h漲跌 32.69         +0%     24h最高價 32.69         24h最低價 32.69         ";
+        displayElement.style.whiteSpace = "pre-wrap";
+        break;
+      default:
+        displayElement.textContent = "即時價格 5.22       24h漲跌 5.22       +0%     24h最高價 5.22       24h最低價 5.22       ";
+        displayElement.style.whiteSpace = "pre-wrap";
+        break;
+    }
+  }
+</script>
 </html>
