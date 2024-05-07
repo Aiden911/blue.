@@ -273,6 +273,7 @@
       margin-bottom: 40px;
       display: flex;
       justify-content: center;
+      font-weight: 600;
     }
 
     .buying-button button {
@@ -322,6 +323,7 @@
       padding: 5px 0;
       text-align: center;
       color: #000;
+      font-weight: 600;
     }
 
     #displayValue {
@@ -705,6 +707,19 @@
         break;
     }
   }
+  document.addEventListener("DOMContentLoaded", function() {
+  let Left = document.querySelector('.buying-button .left');
+  let Right = document.querySelector('.buying-button .right');
+  let Button = document.querySelector('.buying-Sure button');
+
+  Left.addEventListener("click", function() {
+    Button.textContent = "買入";
+  });
+
+  Right.addEventListener("click", function() {
+    Button.textContent = "賣出";
+  });
+});
 </script>
 </script>
 

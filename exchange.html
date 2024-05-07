@@ -10,213 +10,256 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
   <style>
-    body{
+    body {
       font-family: "Noto Sans TC", sans-serif;
     }
 
     /* header---------- */
     .header {
-			background-color: #fff;
+      background-color: #fff;
 
-		}
+    }
 
-		.header .container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			/* background-color: aqua; */
-		}
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* background-color: aqua; */
+    }
 
-		.menu-icon {
-			display: none;
-			cursor: pointer;
+    .menu-icon {
+      display: none;
+      cursor: pointer;
 
-		}
+    }
 
-		.bar {
-			width: 25px;
-			height: 3px;
-			background-color: #000000;
-			margin: 5px;
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000000;
+      margin: 5px;
 
-		}
+    }
 
-		.logo-img img {
-			width: 3.90625vw;
-			padding: 5px;
-		}
+    .logo-img img {
+      width: 3.90625vw;
+      padding: 5px;
+    }
 
-		.menu {
-			display: flex;
-			align-items: center;
-			flex: 1;
-			justify-content: space-between;
+    .menu {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: space-between;
 
-		}
+    }
 
-		.left-menu,
-		.right-menu {
-			list-style: none;
-			padding: 5px;
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-
-		}
-
-		.right-menu img {
-			width: clamp(10px, 1.5625vw, 20px);
-		}
-
-		.left-menu li,
-		.right-menu li {
-			margin-left: 20px;
-			text-decoration: none;
-		}
-
-		.left-menu li a,
-		.right-menu li a {
-			color: black;
-			text-decoration: none;
-			font-size: clamp(10px, 1.5625vw, 20px);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.right-menu .login-button {
-			width: 6.6785vw;
-			background-color: rgba(217, 217, 217, 1);
-			border-radius: 30px;
-			text-align: center;
-			padding: 8% 0;
-
-		}
-
-		.right-menu .register-button {
-			width: 6.6785vw;
-			background-color: #0296D4;
-			border-radius: 30px;
-			text-align: center;
-			padding: 8% 0;
-		}
-
-		.right-menu .register-button a {
-			color: #fff;
-		}
-
-		@media screen and (max-width: 576px) {
-
-			.left-menu,
-			.right-menu {
-				display: none;
-				position: absolute;
-			}
-
-			.logo {
-				display: flex;
-				justify-content: space-between;
-				width: 100%;
-			}
-
-			.logo-img img {
-				min-width: 30px;
-			}
+    .left-menu,
+    .right-menu {
+      list-style: none;
+      padding: 5px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
 
-			.menu {
-				display: block;
+    }
 
-			}
+    .right-menu img {
+      width: clamp(10px, 1.5625vw, 20px);
+    }
 
-			.menu-icon {
-				display: block;
-				position: relative;
-			}
+    .left-menu li,
+    .right-menu li {
+      margin-left: 20px;
+      text-decoration: none;
+    }
 
-			.menu.active .left-menu,
-			.menu.active .right-menu {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				width: 15vw;
-				background-color: #F2F3F7;
-				height: 40vw;
-				z-index: 2;
-			}
+    .left-menu li a,
+    .right-menu li a {
+      color: black;
+      text-decoration: none;
+      font-size: clamp(10px, 1.5625vw, 20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-			.menu.active .right-menu {
-				position: absolute;
-				top: 5%;
-				right: 0%;
-				border-radius: 0 30px 30px 0;
-			}
+    .right-menu .login-button {
+      width: 6.6785vw;
+      background-color: rgba(217, 217, 217, 1);
+      border-radius: 30px;
+      text-align: center;
+      padding: 8% 0;
 
-			.menu.active .left-menu {
-				position: absolute;
-				top: 5%;
-				right: 15%;
-				border-radius: 30px 0 0 30px;
-			}
+    }
 
-			.left-menu li,
-			.right-menu li {
-				padding: 1vw;
-				margin: auto;
-			}
-			.right-menu .login-button {
-			padding: 3px 0;
+    .right-menu .register-button {
+      width: 6.6785vw;
+      background-color: #0296D4;
+      border-radius: 30px;
+      text-align: center;
+      padding: 8% 0;
+    }
 
-		}
+    .right-menu .register-button a {
+      color: #fff;
+    }
 
-		.right-menu .register-button {
-			padding: 3px 0;
-		}
-		}
+    @media screen and (max-width: 576px) {
+
+      .left-menu,
+      .right-menu {
+        display: none;
+        position: absolute;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo-img img {
+        min-width: 30px;
+      }
+
+
+      .menu {
+        display: block;
+
+      }
+
+      .menu-icon {
+        display: block;
+        position: relative;
+      }
+
+      .menu.active .left-menu,
+      .menu.active .right-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15vw;
+        background-color: #F2F3F7;
+        height: 40vw;
+        z-index: 2;
+      }
+
+      .menu.active .right-menu {
+        position: absolute;
+        top: 5%;
+        right: 0%;
+        border-radius: 0 30px 30px 0;
+      }
+
+      .menu.active .left-menu {
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        border-radius: 30px 0 0 30px;
+      }
+
+      .left-menu li,
+      .right-menu li {
+        padding: 1vw;
+        margin: auto;
+      }
+
+      .right-menu .login-button {
+        padding: 3px 0;
+
+      }
+
+      .right-menu .register-button {
+        padding: 3px 0;
+      }
+    }
+
     /* ---------------------- */
 
-    .section-exchange{
+    .section-exchange {
       margin: auto;
     }
-    .section-exchange .container{
+
+    .exchange-container {
       width: 100%;
       margin: auto;
+      background-color: #F2F3F7;
     }
-    .Currency{
+
+    .Currency {
       display: flex;
-      justify-content: start;
-      margin: 5% 0;
-      
+      justify-content: center;
+      padding: 3% 0;
+
     }
+
     .Currency select {
       font-size: 20px;
       font-weight: 600;
     }
-    #regionSelect{
-      margin-left: 13%;
+
+    #regionSelect {
       border-radius: 30px;
       text-align: center;
       border: 2px solid black;
     }
-    #displayValue{
+
+    #displayValue {
       margin-left: 3%;
-      border: 2px solid black;
+      border: 1px solid black;
       padding: 1%;
       border-radius: 30px;
       font-size: 18px;
     }
+
     @media screen and (max-width: 1100px) {
       .Currency select {
-      font-size: clamp(14px,1.8vw,20px);
+        font-size: clamp(14px, 1.8vw, 20px);
+      }
+
+      #displayValue {
+        font-size: clamp(12px, 1.6vw, 18px);
+      }
     }
-    #displayValue{
-      font-size: clamp(12px,1.6vw,18px);
+
+    @media screen and (max-width: 768px) {
+      .Currency select {
+        font-size: clamp(12px, 1.8vw, 20px);
+      }
+
+      #displayValue {
+        font-size: clamp(11px, 1.6vw, 18px);
+      }
     }
+
+    @media screen and (max-width: 576px) {
+      .Currency {
+        display: flex;
+        padding: 5% 0;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .Currency select {
+        font-size: clamp(14px, 1.8vw, 20px);
+        margin-bottom: 2%;
+      }
+
+      #displayValue {
+        font-size: clamp(8px, 1.6vw, 18px);
+      }
     }
+
+
     /* ---貨幣 */
+    img {
+      width: 100%;
+    }
+
     .chart {
       display: flex;
       justify-content: center;
@@ -224,41 +267,28 @@
     }
 
     .chart-date {
-      display: flex;
-      justify-content: flex-end;
-      
-    }
-
-    .chart-date.rtl {
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .chart-date .date-img {
-      
-      object-fit: contain;
-      object-position: center center;
-    }
-
-    .chart-date .date-img img {
-      width: 100%;
-      
+      width: 20%;
     }
 
     .chart-Graph {
-      
-      display: flex;
-      flex-direction: column;
+      width: 60%;
     }
 
-    .chart-Graph .Graph-img {
-      width: 100%;
-      
+    .chart-date rtl {
+      width: 20%;
     }
 
-    .chart-Graph .Graph-img img {
-      width: 100%;
-      
+    @media screen and (max-width: 768px) {
+
+      .chart-date,
+      .chart-date rtl {
+        display: none;
+      }
+
+      .chart-Graph {
+        width: 90%;
+      }
+
     }
 
     /* ---圖 */
@@ -268,28 +298,22 @@
 
     }
 
-    .form .form-buy {
+    .form .form-buy,
+    .form-sell {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 30px;
+      padding: 10%;
       border: 1px solid black;
-      margin: 10px;
+      margin: 2%;
       border-radius: 30px;
-      height: 300px;
-      width: 250PX;
+      width: 320px;
+
     }
 
-    .form .form-sell {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 30px;
-      border: 1px solid black;
-      margin: 10px;
-      border-radius: 30px;
-      height: 300px;
-      width: 250PX;
+
+    .group {
+      margin: 2% 0;
     }
 
     .form label {
@@ -299,47 +323,78 @@
 
     .form input {
       background-color: white;
-      width: 100%;
+      width: 90%;
       border: 1px solid black;
       border-radius: 30px;
-      line-height: 3;
+      font-size: 24px;
       color: #000000;
       padding-left: 15px;
     }
-    
+
+
     .form-buy .buy {
-      margin: 0 auto;
+      margin: auto;
+      margin-top: 3%;
       background-color: rgb(6, 153, 6, 0.5);
       font-size: 24px;
-      width: 130px;
+      width: 60%;
       border-radius: 30px;
       color: black;
-      border: none
+      border: none;
+      font-weight: 600;
     }
-    
+
 
     .form-sell .sell {
-      margin: 0 auto;
+      margin: auto;
+      margin-top: 3%;
       background-color: rgb(226, 18, 18, 0.5);
       font-size: 24px;
       width: 60%;
       border-radius: 30px;
       color: black;
       border: none;
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 1100px) {
+
+      .form .form-buy,
+      .form-sell {
+        padding: 10%;
+        margin: 2%;
+        width: clamp(220px, 29vw, 320px);
+      }
+
+      .form label {
+        font-size: clamp(16px, 2vw, 24px);
+      }
+
+      .form input {
+        font-size: clamp(16px, 2vw, 24px);
+      }
+
+      .form-buy .buy {
+        font-size: clamp(16px, 2vw, 24px);
+      }
+
+      .form-sell .sell {
+        font-size: clamp(16px, 2vw, 24px);
+      }
     }
 
     .record {
-      margin: 0 auto;
+      margin: 3% auto;
       width: 80%;
-      height: 400px;
+      height: 40vw;
+      min-width: 300px;
+      min-height: 250px;
       border: 2px solid black;
       border-radius: 30px;
-      font-size: 20px;
-
     }
 
     .record .list {
-      margin: 20px;
+      margin: 2%;
     }
 
     .record .list button {
@@ -347,49 +402,74 @@
       color: black;
       border: 1px solid black;
       border-radius: 30px;
-      width: 80px;
-      height: 40px;
+      padding: 1.5%;
+      font-size:clamp(12px, 2vw, 18px);
     }
-    .record .list button:active{
-      background-color:#ffffff;
+    
+    @media screen and (max-width: 576px) {
+      .form .form-buy,
+      .form-sell {
+        padding: 10%;
+        margin: 2%;
+        width: clamp(170px, 38vw, 320px);
+      }
+
+      .form label {
+        font-size: clamp(12px, 2.7vw, 24px);
+      }
+
+      .form input {
+        font-size: clamp(12px, 2.7vw, 24px);
+      }
+
+      .form-buy .buy {
+        font-size: clamp(12px,  2.7vw, 24px);
+      }
+
+      .form-sell .sell {
+        font-size: clamp(12px,  2.7vw, 24px);
+      }
+      .record .list button {
+        font-size: clamp(10px,  2vw, 20px);
+      }
     }
   </style>
 </head>
 
 <body>
   <div section section-exchange>
-    <div class="container">
-      <nav class="header">
-        <div class="container">
-          <div class="logo">
-            <div class="logo-img"><a href="index.html"><img src="./img/logo_0328.png" alt=""></a></div>
-            <div class="menu-icon" onclick="toggleMenu()">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
-          </div>
-          <div class="menu">
-            <ul class="left-menu">
-              <li><a href="Buying .html">一鍵買賣</a></li>
-              <li><a href="exchange.html">交易</a></li>
-              <li><a href="#">理財</a></li>
-              <li><a href="aboutus.html">關於我們</a></li>
-            </ul>
-            <ul class="right-menu">
-              <li>
-                <div class="login-button"><a href="login.html">登入</a></div>
-              </li>
-              <li>
-                <div class="register-button"><a href="register.html">註冊</a></div>
-              </li>
-              <li><a href="#"><img src="./img/Vector.png" alt=""></a></li>
-              <li><a href="#"><img src=".//img/Vector (1).png" alt=""></a></li>
-              <li><a href="#"><img src="./img/Vector (2).png" alt=""></a></li>
-            </ul>
+    <nav class="header">
+      <div class="container">
+        <div class="logo">
+          <div class="logo-img"><a href="index.html"><img src="./img/logo_0328.png" alt=""></a></div>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
           </div>
         </div>
-      </nav>
+        <div class="menu">
+          <ul class="left-menu">
+            <li><a href="Buying .html">一鍵買賣</a></li>
+            <li><a href="exchange.html">交易</a></li>
+            <li><a href="#">理財</a></li>
+            <li><a href="aboutus.html">關於我們</a></li>
+          </ul>
+          <ul class="right-menu">
+            <li>
+              <div class="login-button"><a href="login.html">登入</a></div>
+            </li>
+            <li>
+              <div class="register-button"><a href="register.html">註冊</a></div>
+            </li>
+            <li><a href="#"><img src="./img/Vector.png" alt=""></a></li>
+            <li><a href="#"><img src=".//img/Vector (1).png" alt=""></a></li>
+            <li><a href="#"><img src="./img/Vector (2).png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="exchange-container">
       <div class="Currency">
         <select name="region" id="regionSelect" onchange="updateDisplay()">
           <option value="default">幣別</option>
@@ -398,8 +478,10 @@
           <option value="USDC">USDC</option>
           <option value="DOGC">DOGC</option>
         </select>
-    
-        <div id="displayValue">即時價格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h漲跌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+0%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h最高價&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h最低價</div>
+
+        <div id="displayValue">
+          即時價格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h漲跌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+0%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h最高價&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24h最低價
+        </div>
       </div>
       <div class="chart">
         <div class="chart-date">
@@ -409,24 +491,34 @@
           <div class="Graph-img">
             <img src="./img/專題圖檔17.png" alt="">
           </div>
-          <div class="form">
-            <div class="form-buy">
-              <label for="price">價格</label>
-              <input type="text" name="price" id="price">
-              <label for="quantity">數量</label>
-              <input type="text" name="quantity" id="quantity">
-              <label for="sum">總金額</label>
-              <input type="text" name="sum" id="sum">
-              <button class="buy">買入</button>
+          <div class="form ">
+            <div class="form">
+              <form class="form-buy">
+                <div class="group"> <label for="price">價格</label>
+                  <input type="text" name="price" id="price">
+                </div>
+                <div class="group"><label for="quantity">數量</label>
+                  <input type="text" name="quantity" id="quantity">
+                </div>
+                <div class="group"><label for="sum">總金額</label>
+                  <input type="text" name="sum" id="sum">
+                </div>
+                <button class="buy">買入</button>
+              </form>
             </div>
-            <div class="form-sell">
-              <label for="price">價格</label>
-              <input type="text" name="price" id="price">
-              <label for="quantity">數量</label>
-              <input type="text" name="quantity" id="quantity">
-              <label for="sum">總金額</label>
-              <input type="text" name="sum" id="sum">
-              <button class="sell">賣出</button>
+            <div class="form">
+              <form class="form-sell">
+                <div class="group"><label for="price">價格</label>
+                  <input type="text" name="price" id="price">
+                </div>
+                <div class="group"><label for="quantity">數量</label>
+                  <input type="text" name="quantity" id="quantity">
+                </div>
+                <div class="group"><label for="sum">總金額</label>
+                  <input type="text" name="sum" id="sum">
+                </div>
+                <button class="sell">賣出</button>
+              </form>
             </div>
           </div>
         </div>
@@ -482,4 +574,5 @@
     }
   }
 </script>
+
 </html>
