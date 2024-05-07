@@ -302,6 +302,7 @@
     }
     .register-button{
       text-align: center;
+      font-weight: 600;
     }
     .register-button button {
       background-color: #fff;
@@ -351,11 +352,11 @@
       .group input {
         width: 90%;
         border-radius: 30px;
-        line-height: 1.5;
+
         border: none;
         padding-left: 10px;
         margin: 1vw;
-        font-size: clamp(12px, 2vw, 20px)
+        font-size: clamp(8px, 2vw, 20px)
       }
 
       .group label {
@@ -386,14 +387,13 @@
 
       .group {
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+       
         justify-content: space-between;
         margin: 3% 0;
       }
 
       .group input {
-        line-height: 1;
         margin: 0.2vw;
       }
 
@@ -416,24 +416,7 @@
       }
     }
 
-    @media screen and (max-width: 400px) {
-      .register-item {
-        width: clamp(330px, 77vw, 500px);
-        height: clamp(330px, 77vw, 500px);
-      }
-      .register-item::before{
-        width: clamp(300px, 77vw, 500px);
-        height: clamp(300px, 77vw, 500px);
-      }
-      .group {
-        margin: 1% 0;
-      }
-
-      .register-button button {
-        margin: 0 5px;
-
-      }
-    }
+  
 
 
     /* ---footer--- */
