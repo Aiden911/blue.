@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <style>
     body {
       font-family: "Noto Sans TC", sans-serif;
@@ -549,7 +553,9 @@
         <div class="circle-small"><img src="./img/小圓.svg" alt=""></div>
 
 
-        <div class="register-item">
+        <div class="register-item"
+        data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000"
+          data-aos-once="true">
           <h2>註冊會員</h2>
           <form action="">
           <div class="input-list">
@@ -650,6 +656,6 @@
     var menu = document.querySelector('.menu');
     menu.classList.toggle('active');
   }
+AOS.init();
 </script>
-
 </html>

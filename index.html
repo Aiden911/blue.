@@ -18,6 +18,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
 
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 	<style>
 		body {
 			font-family: "Noto Sans TC", sans-serif;
@@ -781,15 +785,6 @@
 			padding: 2%;
 		}
 
-		.service-list .item:hover {
-			background-color: #0296D4;
-			
-		}
-
-		.service-list .item:hover a {
-			color: #F2F3F7;
-
-		}
 		
 		.service-list a {
 			color: black;
@@ -1169,8 +1164,10 @@
 	<div class="section section-first">
 		<div class="container">
 			<div class="list">
-				<h1>藍星 Blue star 加密貨幣交易所<br>在圓形貨幣世界中璀璨前行</h1>
-				<div class="item">
+				<h1 data-aos="fade-right" data-aos-duration ="1500"
+				data-aos-delay = "1000" >藍星 Blue star 加密貨幣交易所<br>在圓形貨幣世界中璀璨前行</h1>
+				<div data-aos="fade-right" data-aos-duration ="1500"
+				data-aos-delay = "1500" class="item">
 					<div class="item-text">安全</div>
 					<div class="v-link"></div>
 					<div class="item-text">便利</div>
@@ -1405,19 +1402,25 @@
 			</div>
 			<div class="service-list">
 				<h2>解決你的疑問，我們使命必達</h2>
-				<div class="item">
+				<div class="item" data-aos="fade-left" data-aos-duration ="1500"
+				data-aos-delay = "500"
+				data-aos-once ="true">
 					<a href="#">
 						<p>新手教學</p>
 						<span>手把手帶你進入加密貨幣世界，交易好簡單</span>
 					</a>
 				</div>
-				<div class="item">
+				<div class="item" data-aos="fade-left" data-aos-duration ="1500"
+				data-aos-delay = "1000"
+				data-aos-once ="true">
 					<a href="#">
 						<p>線上客服，有問必答</p>
 						<span>專業投資人支持團隊為您排憂解難</span>
 					</a>
 				</div>
-				<div class="item">
+				<div class="item" data-aos="fade-left" data-aos-duration ="1500"
+				data-aos-delay = "1500"
+				data-aos-once ="true">
 					<a href="#">
 						<p>防詐騙專區</p>
 						<span>停！看！聽！一起慎重保護您的資產
@@ -1535,6 +1538,9 @@
 			});
 		}
 	</script>
+	<script>
+    AOS.init();
+</script>
 
 </div>
 

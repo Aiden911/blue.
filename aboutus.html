@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
     body {
       font-family: "Noto Sans TC", sans-serif;
@@ -395,8 +397,9 @@
       <div class="container">
         <div class="about">
           <h1>關於Blue star</h1>
-          <div class="about-item">
-            <div class="about-text">
+          <div class="about-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500"
+          data-aos-once="true">
+            <div class="about-text" >
               <h2>Blue Star</h2>
               <ul>
                 <li>Blue Star 是由藍星團隊所開發。</li>
@@ -407,7 +410,8 @@
               <img src="./img/logo_03.png" alt="">
             </div>
           </div>
-          <div class="about-item">
+          <div class="about-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750"
+          data-aos-once="true">
             <div class="about-text">
               <h2>Blue Star佳績</h2>
               <ol>
@@ -429,7 +433,8 @@
               <img src="./img/Award-unscreen.gif" alt="">
             </div>
           </div>
-          <div class="about-item">
+          <div class="about-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000"
+          data-aos-once="true">
             <div class="about-text">
               <h2>保護您的資產，我們竭盡全力</h2>
               <ul>
@@ -510,5 +515,6 @@
     var menu = document.querySelector('.menu');
     menu.classList.toggle('active');
   }
+  AOS.init();
 </script>
 </html>

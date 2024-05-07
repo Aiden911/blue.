@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <style>
     body {
       font-family: "Noto Sans TC", sans-serif;
@@ -22,166 +26,167 @@
 
     /* header---------- */
     .header {
-			background-color: #fff;
+      background-color: #fff;
 
-		}
+    }
 
-		.header .container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			/* background-color: aqua; */
-		}
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* background-color: aqua; */
+    }
 
-		.menu-icon {
-			display: none;
-			cursor: pointer;
+    .menu-icon {
+      display: none;
+      cursor: pointer;
 
-		}
+    }
 
-		.bar {
-			width: 25px;
-			height: 3px;
-			background-color: #000000;
-			margin: 5px;
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000000;
+      margin: 5px;
 
-		}
+    }
 
-		.logo-img img {
-			width: 3.90625vw;
-			padding: 5px;
-		}
+    .logo-img img {
+      width: 3.90625vw;
+      padding: 5px;
+    }
 
-		.menu {
-			display: flex;
-			align-items: center;
-			flex: 1;
-			justify-content: space-between;
+    .menu {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: space-between;
 
-		}
+    }
 
-		.left-menu,
-		.right-menu {
-			list-style: none;
-			padding: 5px;
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-
-		}
-
-		.right-menu img {
-			width: clamp(10px, 1.5625vw, 20px);
-		}
-
-		.left-menu li,
-		.right-menu li {
-			margin-left: 20px;
-			text-decoration: none;
-		}
-
-		.left-menu li a,
-		.right-menu li a {
-			color: black;
-			text-decoration: none;
-			font-size: clamp(10px, 1.5625vw, 20px);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.right-menu .login-button {
-			width: 6.6785vw;
-			background-color: rgba(217, 217, 217, 1);
-			border-radius: 30px;
-			text-align: center;
-			padding: 8% 0;
-
-		}
-
-		.right-menu .register-button {
-			width: 6.6785vw;
-			background-color: #0296D4;
-			border-radius: 30px;
-			text-align: center;
-			padding: 8% 0;
-		}
-
-		.right-menu .register-button a {
-			color: #fff;
-		}
-
-		@media screen and (max-width: 576px) {
-
-			.left-menu,
-			.right-menu {
-				display: none;
-				position: absolute;
-			}
-
-			.logo {
-				display: flex;
-				justify-content: space-between;
-				width: 100%;
-			}
-
-			.logo-img img {
-				min-width: 30px;
-			}
+    .left-menu,
+    .right-menu {
+      list-style: none;
+      padding: 5px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
 
-			.menu {
-				display: block;
+    }
 
-			}
+    .right-menu img {
+      width: clamp(10px, 1.5625vw, 20px);
+    }
 
-			.menu-icon {
-				display: block;
-				position: relative;
-			}
+    .left-menu li,
+    .right-menu li {
+      margin-left: 20px;
+      text-decoration: none;
+    }
 
-			.menu.active .left-menu,
-			.menu.active .right-menu {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				width: 15vw;
-				background-color: #F2F3F7;
-				height: 40vw;
-				z-index: 100;
-			}
+    .left-menu li a,
+    .right-menu li a {
+      color: black;
+      text-decoration: none;
+      font-size: clamp(10px, 1.5625vw, 20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-			.menu.active .right-menu {
-				position: absolute;
-				top: 5%;
-				right: 0%;
-				border-radius: 0 30px 30px 0;
-			}
+    .right-menu .login-button {
+      width: 6.6785vw;
+      background-color: rgba(217, 217, 217, 1);
+      border-radius: 30px;
+      text-align: center;
+      padding: 8% 0;
 
-			.menu.active .left-menu {
-				position: absolute;
-				top: 5%;
-				right: 15%;
-				border-radius: 30px 0 0 30px;
-			}
+    }
 
-			.left-menu li,
-			.right-menu li {
-				padding: 1vw;
-				margin: auto;
-			}
-			.right-menu .login-button {
-			padding: 3px 0;
+    .right-menu .register-button {
+      width: 6.6785vw;
+      background-color: #0296D4;
+      border-radius: 30px;
+      text-align: center;
+      padding: 8% 0;
+    }
 
-		}
+    .right-menu .register-button a {
+      color: #fff;
+    }
 
-		.right-menu .register-button {
-			padding: 3px 0;
-		}
-		}
+    @media screen and (max-width: 576px) {
+
+      .left-menu,
+      .right-menu {
+        display: none;
+        position: absolute;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .logo-img img {
+        min-width: 30px;
+      }
+
+
+      .menu {
+        display: block;
+
+      }
+
+      .menu-icon {
+        display: block;
+        position: relative;
+      }
+
+      .menu.active .left-menu,
+      .menu.active .right-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 15vw;
+        background-color: #F2F3F7;
+        height: 40vw;
+        z-index: 100;
+      }
+
+      .menu.active .right-menu {
+        position: absolute;
+        top: 5%;
+        right: 0%;
+        border-radius: 0 30px 30px 0;
+      }
+
+      .menu.active .left-menu {
+        position: absolute;
+        top: 5%;
+        right: 15%;
+        border-radius: 30px 0 0 30px;
+      }
+
+      .left-menu li,
+      .right-menu li {
+        padding: 1vw;
+        margin: auto;
+      }
+
+      .right-menu .login-button {
+        padding: 3px 0;
+
+      }
+
+      .right-menu .register-button {
+        padding: 3px 0;
+      }
+    }
 
     /* ---login--- */
     .section-login {
@@ -241,12 +246,13 @@
       margin: 10%;
       position: relative;
       z-index: 10;
-      
 
-      
-      
+
+
+
     }
-    .login-item::before{
+
+    .login-item::before {
       content: "";
       width: 100%;
       height: 100%;
@@ -254,12 +260,12 @@
       position: absolute;
       top: 0%;
       left: 0%;
-      background-image:linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+      background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
       display: block;
       z-index: -3;
-      animation: circle 10S linear infinite,Pulse 3s infinite alternate;
-      
-      
+      animation: circle 10S linear infinite, Pulse 3s infinite alternate;
+
+
     }
 
     .login-item h2 {
@@ -340,13 +346,14 @@
         justify-content: center;
         margin: 5%;
       }
-      .login-item::before{
+
+      .login-item::before {
         width: 77vw;
         height: 77vw;
       }
 
       .login-item h2 {
-        font-size:3.6vw;
+        font-size: 3.6vw;
         font-weight: 600;
         margin-bottom: 4.6875vw;
       }
@@ -457,23 +464,26 @@
         text-align: center;
       }
     }
-    @keyframes circle {
-			0% {
-				transform: rotate(0);
-			}
 
-			100% {
-				transform: rotate(360deg);
-			}
+    @keyframes circle {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
+
     @keyframes Pulse {
-		form {
-			box-shadow:0px 0px 10px 10px #00c8ff5e;
-		}
-		to {
-			box-shadow:0px 0px 20px 10px #00c8ff5e;
-		}
-	}
+      form {
+        box-shadow: 0px 0px 10px 10px #00c8ff5e;
+      }
+
+      to {
+        box-shadow: 0px 0px 20px 10px #00c8ff5e;
+      }
+    }
   </style>
 </head>
 
@@ -518,7 +528,8 @@
         <div class="circle-small"><img src="./img/小圓.svg" alt=""></div>
 
 
-        <div class="login-item">
+        <div class="login-item" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000"
+          data-aos-once="true" >
           <h2>會員登入</h2>
           <form class="login-input">
             <div class="group">
@@ -606,6 +617,8 @@
     var menu = document.querySelector('.menu');
     menu.classList.toggle('active');
   }
+AOS.init();
 </script>
+
 
 </html>

@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <style>
     body {
       font-family: "Noto Sans TC", sans-serif;
@@ -581,7 +585,9 @@
         <div class="circle-middle"><img src="./img/中圓.svg" alt=""></div>
         <div class="circle-small"><img src="./img/小圓.svg" alt=""></div>
 
-        <div class="buying-item">
+        <div class="buying-item"
+        data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000"
+          data-aos-once="true">
           <h2>一鍵買賣</h2>
           <p>大額兌換一口價， 快速擁有多種加密貨幣!</p>
           <div class="buying-button">
@@ -721,7 +727,7 @@
     Button.textContent = "賣出";
   });
 });
-</script>
+AOS.init();
 </script>
 
 </html>
