@@ -151,7 +151,7 @@
 				width: 15vw;
 				background-color: #F2F3F7;
 				height: 40vw;
-				z-index: 2;
+				z-index: 100;
 			}
 
 			.menu.active .right-menu {
@@ -187,11 +187,6 @@
     .section-login {
       margin: 0 auto;
       background-color: #F2F3F7;
-      background-image: url(./img/半圓.svg);
-      background-size: 600px;
-      background-repeat: no-repeat;
-      background-position: top 430px right 1309px;
-      ;
     }
 
     .circle {
@@ -202,7 +197,7 @@
       width: clamp(100px, 22vw, 300px);
       position: absolute;
       top: 40%;
-      left: 68%;
+      left: 76%;
       z-index: 10;
     }
 
@@ -210,15 +205,15 @@
       width: clamp(80px, 14vw, 160px);
       position: absolute;
       top: 29%;
-      left: 62%;
+      left: 70%;
       z-index: 8;
     }
 
     .circle-small img {
       width: clamp(50px, 6vw, 90px);
       position: absolute;
-      top: 90%;
-      left: 20%;
+      top: 110%;
+      left: 3%;
     }
 
 
@@ -230,14 +225,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
 
 
     }
 
     .login-item {
-      width: 600px;
-      height: 600px;
-      background-color: #7DD9F2;
+      width: 650px;
+      height: 650px;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -245,6 +240,26 @@
       flex-direction: column;
       margin: 10%;
       position: relative;
+      z-index: 10;
+      
+
+      
+      
+    }
+    .login-item::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      background-image:linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+      display: block;
+      z-index: -3;
+      animation: circle 10S linear infinite,Pulse 3s infinite alternate;
+      
+      
     }
 
     .login-item h2 {
@@ -318,11 +333,15 @@
       }
 
       .login-item {
-        width: 76.335877vw;
-        height: 76.335877vw;
+        width: 77vw;
+        height: 77vw;
         justify-content: space-evenly;
         margin: 5%;
         position: relative;
+      }
+      .login-item::before{
+        width: 77vw;
+        height: 77vw;
       }
 
       .login-item h2 {
@@ -341,7 +360,7 @@
         line-height: 1.5;
         padding-left: 10px;
         margin: 1vw;
-        font-size: clamp(12px, 2vw, 20px)
+        font-size: clamp(14px, 2vw, 20px)
       }
 
       .group label {
@@ -438,6 +457,23 @@
         text-align: center;
       }
     }
+    @keyframes circle {
+			0% {
+				transform: rotate(0);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+    }
+    @keyframes Pulse {
+		form {
+			box-shadow:0px 0px 10px 10px #00c8ff5e;
+		}
+		to {
+			box-shadow:0px 0px 20px 10px #00c8ff5e;
+		}
+	}
   </style>
 </head>
 
@@ -495,7 +531,7 @@
             </div>
 
             <div class="login-button">
-              <button>登入</button>
+              <button type="submit">登入</button>
             </div>
           </form>
           <div class="login-register">

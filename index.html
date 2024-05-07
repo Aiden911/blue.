@@ -183,34 +183,51 @@
 				padding: 1vw;
 				margin: auto;
 			}
+
 			.right-menu .login-button {
-			padding: 3px 0;
+				padding: 3px 0;
 
-		}
+			}
 
-		.right-menu .register-button {
-			padding: 3px 0;
-		}
+			.right-menu .register-button {
+				padding: 3px 0;
+			}
 		}
 
 
 		/* ---section-first--- */
 		.section-first {
-			background-image: url(./img/Group\ 56.svg);
-			background-size: 54.21875%;
 			max-width: 1920px;
-			background-repeat: no-repeat;
-			background-position: top 100px right -20px;
 			margin: 0 auto;
 			width: 100%;
+			position: relative;
+			overflow: hidden;
 		}
 
+		.section-first::before {
+			content: '';
+			width: 50vw;
+			height: 50vw;
+			border-radius: 50%;
+			background: url(./img/blue.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			position: absolute;
+			top: 17%;
+			right: 0%;
+			z-index: -1;
+			animation: circle 20S linear infinite,Pulse 3s infinite alternate;
+			
+		}
+		
+		
 		.section-first .container {
 
 			margin: auto;
 			width: 100%;
 		}
-
+		
 		.list h1 {
 			font-size: clamp(12px, 2.65625vw, 34px);
 			margin-top: 8%;
@@ -219,14 +236,14 @@
 			line-height: 150%;
 			margin-left: 15%;
 		}
-
+		
 		.list .item {
 			display: flex;
 			padding-top: 3%;
 			font-weight: 600;
 			padding-left: 15%;
 		}
-
+		
 		.item .v-link {
 			border-right: 1px solid black;
 		}
@@ -247,9 +264,9 @@
 
 		.item-button a:hover {
 			color: #0B2F47;
-
+			
 		}
-
+		
 		.item-button a {
 			text-decoration: none;
 			color: #fff;
@@ -257,19 +274,20 @@
 			font-weight: 600;
 			transition: .5S;
 		}
-
+		
 		/* --------Carousel */
 		.owl-carousel .owl-theme {
 			margin: auto;
-		}
 
+		}
+		
 		.owl-theme .item {
 			background: #ffffff;
 			border-radius: 30px;
-
-
+			
+			
 		}
-
+		
 		.owl-carousel .item h4 img {
 			border-radius: 30px;
 			width: 100%;
@@ -282,15 +300,15 @@
 			width: 100%;
 			position: relative;
 		}
-
+		
 		.marquee {
 			width: 100%;
 			height: clamp(20px, 3.90625vw, 50px);
 			background-color: #0B2F47;
 			overflow: hidden;
-
+			
 		}
-
+		
 		.marquee-text {
 			display: inline-block;
 			white-space: nowrap;
@@ -298,9 +316,9 @@
 			font-size: 1.40625vw;
 			line-height: 3.90625vw;
 			color: #fff;
-
+			
 		}
-
+		
 		@media screen and (max-width: 768px) {
 			.marquee-text {
 				display: inline-block;
@@ -311,7 +329,7 @@
 				color: #fff;
 			}
 		}
-
+		
 		@keyframes marquee {
 			0% {
 				transform: translateX(0);
@@ -322,8 +340,8 @@
 			}
 		}
 
-
-
+		
+		
 		/* ---safety--- */
 		.safety-list {
 			display: flex;
@@ -348,23 +366,23 @@
 			width: 7.825vw;
 			padding-right: 10px;
 		}
-
+		
 		.sefety-pic img {
 			width: 100%;
 		}
-
+		
 		.safety-item+.safety-item::before {
 			content: "";
 			border: 0.5px solid black;
 			margin: 0 10px;
 		}
-
+		
 		@media screen and (max-width: 768px) {
 			.safety-text {
 				font-size: clamp(8px, 1.40625vw, 18px);
 			}
 		}
-
+		
 		/* ---chart--- */
 		.section-chart .container {
 			margin: auto;
@@ -376,11 +394,11 @@
 			flex-direction: row;
 			justify-content: flex-start;
 			border-bottom: 1px solid #ccc;
-
-
+			
+			
 			margin: 20px 0;
 		}
-
+		
 		.chart-table .list button {
 			font-size: clamp(8px, 1.875vw, 24px);
 			padding: 0 20px;
@@ -389,54 +407,56 @@
 			border-bottom: 1px solid #ccc;
 			color: #000000;
 		}
-
+		
 
 		.chart-table .list img {
 			max-width: 30px;
 			vertical-align: text-top;
 		}
-
+		
 		.chart {
 			text-align: center;
 		}
-		.chart .more{
+		
+		.chart .more {
 			padding-top: 10%;
 		}
+		
 		.chart h2 {
 			font-size: 2.5vw;
 			font-weight: 600;
 			margin-bottom: 5%;
 		}
-
+		
 		.chart a {
 			text-decoration: none;
 			color: black;
 			font-size: clamp(10px, 1.5625vw, 20px);
 		}
-
+		
 		.chart table {
 			width: 100%;
 			margin: auto;
 			border-collapse: collapse;
 			font-size: clamp(8px, 1.5625vw, 20px);
 		}
-
+		
 		.chart tr {
 			text-align: left;
-
+			
 		}
-
+		
 		.chart th,
 		td {
 			padding: 0.78125vw;
 			border: none;
-
+			
 		}
 
 		.chart th {
 			background-color: #fff;
 		}
-
+		
 		.chart td button {
 			padding: 8px 16px;
 			color: #000000;
@@ -444,15 +464,15 @@
 			cursor: pointer;
 			font-size: clamp(8px, 1.5625vw, 20px);
 		}
-
+		
 		.chart img {
 			width: 8.59375vw;
 		}
-
+		
 		.trend img {
 			width: 9.375vw;
 		}
-
+		
 		.Currency img {
 			width: 2.34375vw;
 			vertical-align: text-top
@@ -464,7 +484,7 @@
 				font-weight: 600;
 				margin-top: 20px;
 			}
-
+			
 			.chart table {
 				font-size: 6px;
 			}
@@ -480,7 +500,7 @@
 			.Currency img {
 				max-width: 10px;
 			}
-
+			
 			.chart td button {
 				padding: 6px 12px;
 				color: #000000;
@@ -493,7 +513,7 @@
 				max-width: 10px;
 			}
 		}
-
+		
 		/* ---choose--- */
 		.section-choose {
 			margin: auto;
@@ -505,7 +525,7 @@
 			/* max-width: 1200px; */
 			width: 100%;
 		}
-
+		
 		.choose {
 			text-align: center;
 		}
@@ -514,7 +534,7 @@
 			font-size: 2.5vw;
 			font-weight: 600;
 		}
-
+		
 		.choose-Options a+a::before {
 			content: "";
 			border: 1px solid white;
@@ -528,7 +548,7 @@
 			margin: 8% auto 8%;
 			border-radius: 50px;
 		}
-
+		
 		.choose-Options a {
 			text-decoration: none;
 			font-size: clamp(10px, 1.5625vw, 20px);
@@ -536,16 +556,17 @@
 			line-height: 3.90625vw;
 			transition: .5s;
 		}
-		.choose-Options a:hover{
+
+		.choose-Options a:hover {
 			color: #0B2F47;
 		}
 
-
+		
 		.choose-list {
 			display: flex;
 			justify-content: space-evenly;
 		}
-
+		
 		.choose-item {
 			display: flex;
 			flex-direction: column;
@@ -555,34 +576,35 @@
 			background-color: #fff;
 			border-radius: 30px;
 			height: 23.4375vw;
-
-
-
+			
+			
+			
 		}
-
+		
 		.choose-item img {
 			width: 4.6876vw;
 			margin: 0 auto;
-
+			
 		}
-
+		
 		.choose-item p {
 			font-size: 2.34375vw;
 		}
-
+		
 		.choose-item span {
 			font-size: clamp(12px, 1.875vw, 24px);
 		}
-
+		
 		.choose-item a img {
 			width: 3.125vw;
-	
+
 		}
-		.choose-item a img:hover{
-			animation: move 1s ease-in-out infinite;
+		
+		.choose-item:hover a {
+			animation: move .5s ease-in-out infinite;
 			
 		}
-
+		
 		@media screen and (max-width: 576px) {
 			.choose-list {
 				display: flex;
@@ -593,7 +615,7 @@
 			.choose-Options a {
 				font-size: 10px;
 			}
-
+			
 			.choose-item {
 				display: flex;
 				flex-direction: column;
@@ -615,7 +637,7 @@
 			.choose-item img {
 				width: 30px;
 				margin: 0 auto;
-
+				
 			}
 
 			.choose-item p {
@@ -628,10 +650,10 @@
 
 			.choose-item a img {
 				width: 20px;
-
+				
 			}
 		}
-
+		
 		/* ---tea--- */
 		.section-tea .container {
 			margin: 5% auto;
@@ -640,7 +662,7 @@
 			background-repeat: no-repeat;
 			background-position: 80% 10%;
 		}
-
+		
 		.tea-text {
 			margin: 0 100px;
 		}
@@ -650,7 +672,7 @@
 			padding: 5% 0;
 			font-weight: 600;
 		}
-
+		
 		.tea-text p {
 			font-size: clamp(12px, 1.875vw, 24px);
 			margin: 5%;
@@ -667,7 +689,7 @@
 			font-weight: 600;
 			
 		}
-
+		
 		.tea-text .button a:hover {
 			color: #0B2F47;
 		}
@@ -677,7 +699,7 @@
 			color: white;
 			transition: .5s;
 		}
-
+		
 		@media screen and (max-width: 576px) {
 			.section-tea .container {
 				width: 100%;
@@ -692,13 +714,13 @@
 				font-size: clamp(10px, 2.5vw, 24px);
 				font-weight: 600;
 			}
-
+			
 			.tea-text p {
 				font-size: clamp(8px, 1.875vw, 24px);
 				margin: 5%;
 				font-weight: 600;
 			}
-
+			
 		}
 
 		/* ---customer service--- */
@@ -707,48 +729,48 @@
 			padding: 5% 0;
 			;
 		}
-
+		
 		.section-service .container {
 			margin: 0 auto;
 			width: 100%;
 			max-width: 1200px;
-			background-image: url(./img/0001-removebg-preview.png);
-			background-size: 30vw;
-			background-repeat: no-repeat;
-			background-position: top 205px right 660px;
-
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.service-pic{
+			padding-right: 10%;
+		}
+		.service-pic img{
+			width: 35vw;
 		}
 
 		.service-list {
 			display: flex;
 			flex-direction: column;
-			align-items: end;
-
-
+			align-items: center;
+			
+			
 		}
-
+		
 		.service-list h2 {
 			font-size: 2.8125vw;
 			font-weight: 600;
-			margin: 3%;
-
+			margin-bottom: 15% ;
+			
 		}
 
 		.service-list p {
 			font-size: clamp(12px, 1.875vw, 24px);
 		}
-
+		
 		.service-list .item span {
 			font-size: clamp(10px, 1.5625vw, 20px);
 		}
 
-		.service-list .item img {
-			width: 1.953125vw;
-		}
-
 		.service-list .item {
 			background-color: #fff;
-			width: 35.15625vw;
+			width: clamp(100px,35.15625vw,500px);
 			margin: 3%;
 			border: 1px solid black;
 			border-radius: 30px;
@@ -761,9 +783,14 @@
 
 		.service-list .item:hover {
 			background-color: #0296D4;
-
+			
 		}
 
+		.service-list .item:hover a {
+			color: #F2F3F7;
+
+		}
+		
 		.service-list a {
 			color: black;
 			text-decoration: none;
@@ -787,18 +814,19 @@
 				text-align: center;
 				line-height: 150%;
 				font-weight: 600;
-				/* transform: scale(1); */
-				/* transition: .5s; */
-
+				
 			}
-
+			.service-pic{
+				display: none;
+			}
+			
 			.service-list h2 {
 				font-size: 12px;
 				font-weight: 600;
-				margin-bottom: 5%;
-
+				margin-bottom: 15%;
+				
 			}
-
+			
 			.service-list p {
 				font-size: 10px;
 			}
@@ -806,12 +834,12 @@
 			.service-list .item span {
 				font-size: 8px;
 			}
-
+			
 			.service-list .item img {
 				width: 8px;
 			}
 		}
-
+		
 		/* ---join--- */
 		.section-join {
 			background-image: url(./img/水管.svg);
@@ -821,16 +849,16 @@
 			background-position: top 0px right -150px;
 			display: none;
 		}
-
-
-
+		
+		
+		
 		.section-join .container {
 			max-width: 1200PX;
 			width: 100%;
 			margin: 0 auto;
 			position: relative;
 		}
-
+		
 		.join-text h2 {
 			text-align: center;
 			color: #fff;
@@ -838,17 +866,17 @@
 			padding-top: 3%;
 			font-weight: 600;
 			line-height: 60px;
-
-
+			
+			
 		}
-
+		
 		.join-text a {
 			text-decoration: none;
 			color: black;
 			font-size: clamp(12px, 1.875vw, 24px);
-
+			
 		}
-
+		
 		.join-text .button {
 			width: 23.4375vw;
 			border-radius: 30px;
@@ -862,47 +890,47 @@
 			transform: scale(1);
 			transition: .5s;
 		}
-
+		
 		.join-text .button:hover {
 			transform: scale(1.2);
 		}
-
+		
 		@media screen and (max-width: 600px) {
 			.section-join {
 				display: none;
 			}
 		}
-
+		
 		/* ---footer--- */
 		.section-footer {
 			margin: 0 auto;
 			margin: 5%;
 		}
-
+		
 		.section-footer .container {
 			max-width: 1200px;
 			width: 100%;
 			margin: 0 auto;
 		}
-
+		
 		.footer-list {
 			display: flex;
 			justify-content: space-evenly;
 		}
-
+		
 		.footer-item {
 			width: 130px;
 		}
-
+		
 		.footer-item h3 {
 			font-size: clamp(12px, 1.875vw, 24px);
 			text-align: center;
 		}
-
+		
 		.footer-item nav {
 			margin: 10px 0;
 		}
-
+		
 		.footer-item nav a {
 			display: flex;
 			flex-direction: column;
@@ -912,18 +940,18 @@
 			font-size: clamp(10px, 1.25vw, 20px);
 			padding: 5px;
 		}
-
+		
 		.footer-item .footer-icon {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
-
+			
 		}
-
+		
 		.footer-item .footer-icon img {
 			width: clamp(10px, 1.5625vw, 20px);
-
+			
 		}
 
 		.footer-statement {
@@ -931,18 +959,18 @@
 			font-size: clamp(10px, 1.5625vw, 20px);
 			margin: 5%;
 		}
-
+		
 		@media screen and (max-width: 576px) {
 			.footer-item.hide {
 				display: none;
 			}
-
+			
 			.footer-item h3 {
 				font-size: 12px;
 				text-align: center;
 			}
 		}
-
+		
 		/* ---- */
 		.dialogue {
 			width: 360px;
@@ -958,10 +986,10 @@
 			right: 4%;
 			z-index: 30;
 			background: #fff;
-
-
+			
+			
 		}
-
+		
 		.dialogue .header {
 			width: 360px;
 			height: 15%;
@@ -971,14 +999,14 @@
 			flex-direction: column;
 			justify-content: flex-start;
 		}
-
+		
 		.dialogue .header>h2 {
 			padding: 20px 0 0 20px;
 			font-size: 18px;
 			font-weight: 600;
 			color: #fff;
 		}
-
+		
 		.dialogue .header>p {
 			margin: 20px 0 0 20px;
 			font-size: 16px;
@@ -993,7 +1021,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 		}
-
+		
 		.dialogue-list .text-img {
 			padding: 10px;
 			display: flex;
@@ -1001,17 +1029,17 @@
 			justify-content: center;
 			align-items: center;
 		}
-
+		
 		.dialogue-list .text-img img {
 			width: 30px;
 			height: 30px;
-
+			
 		}
-
+		
 		.dialogue-item {
 			display: flex;
 		}
-
+		
 		.dialogue-list .text-img p {
 			font-size: 12px;
 		}
@@ -1030,7 +1058,7 @@
 			text-align: center;
 			line-height: 60px;
 		}
-
+		
 		.text-list .text-time p {
 			font-size: 10px;
 			margin-left: 10px;
@@ -1051,9 +1079,9 @@
 			border: 1px solid black;
 			border-radius: 30px;
 			padding-left: 15px;
-
+			
 		}
-
+		
 		.container .Click img {
 			width: 40px;
 			height: 40px;
@@ -1070,12 +1098,41 @@
 
 
 		@keyframes move {
-  0% { transform: translateX(-5px); }
-  50% { transform: translateX(0px); }
-  100% { transform: translateX(5px); }
-  
-}
-	</style>
+			0% {
+				transform: translateX(-8px);
+			}
+			
+			50% {
+				transform: translateX(0px);
+			}
+			
+			100% {
+				transform: translateX(8px);
+			}
+			
+		}
+		@keyframes Pulse {
+		form {
+			box-shadow:0px 0px 20px 20px #0296d475,
+			inset 0 0 20px 11px #0296d475;
+		}
+
+		to {
+			box-shadow:0px 0px 40px 20px #0296d475,
+			inset 0 0 40px 11px #0296d475;
+		}
+	}
+
+		@keyframes circle {
+			0% {
+				transform: rotate(0);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		</style>
 </head>
 <div class="topics">
 	<nav class="header">
@@ -1343,24 +1400,27 @@
 	</div>
 	<div class="section section-service">
 		<div class="container">
+			<div class="service-pic">
+				<img src="./img/0001-removebg-preview.png" alt="">
+			</div>
 			<div class="service-list">
 				<h2>解決你的疑問，我們使命必達</h2>
 				<div class="item">
 					<a href="#">
 						<p>新手教學</p>
-						<span>手把手帶你進入加密貨幣世界，交易好簡單</span><img src="./img/Vector.svg" alt="">
+						<span>手把手帶你進入加密貨幣世界，交易好簡單</span>
 					</a>
 				</div>
 				<div class="item">
 					<a href="#">
 						<p>線上客服，有問必答</p>
-						<span>專業投資人支持團隊為您排憂解難</span><img src="./img/Vector.svg" alt="">
+						<span>專業投資人支持團隊為您排憂解難</span>
 					</a>
 				</div>
 				<div class="item">
 					<a href="#">
 						<p>防詐騙專區</p>
-						<span>停！看！聽！一起慎重保護您的資產</span><img src="./img/Vector.svg" alt="">
+						<span>停！看！聽！一起慎重保護您的資產
 					</a>
 				</div>
 			</div>

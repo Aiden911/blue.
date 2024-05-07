@@ -151,7 +151,7 @@
 				width: 15vw;
 				background-color: #F2F3F7;
 				height: 40vw;
-				z-index: 2;
+				z-index: 100;
 			}
 
 			.menu.active .right-menu {
@@ -186,11 +186,7 @@
     .section-register {
       margin: 0 auto;
       background-color: #F2F3F7;
-      background-image: url(./img/半圓.svg);
-      background-size: 600px;
-      background-repeat: no-repeat;
-      background-position: top 430px right 1309px;
-      ;
+      overflow: hidden;
     }
 
     .circle-big img {
@@ -199,8 +195,9 @@
       top: 40%;
       left: 75%;
       z-index: 10;
+      
     }
-
+    
     .circle-middle img {
       width: clamp(80px, 15vw, 180px);
       position: absolute;
@@ -224,13 +221,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      overflow: hidden
     }
 
     .register-item {
       width: 700px;
       height: 700px;
-      background-color: #7DD9F2;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -238,12 +234,32 @@
       flex-direction: column;
       margin: 10%;
       position: relative;
+      z-index: 10;
+      
+
+      
+      
+    }
+    .register-item::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+      display: block;
+      z-index: -3;
+      animation: circle 10S linear infinite,Pulse 3s infinite alternate;
+      
     }
 
     .register-item h2 {
       font-size: 36px;
       font-weight: 600;
       margin-bottom: 60px;
+  
     }
 
     .input-list {
@@ -284,7 +300,9 @@
       letter-spacing: 2px;
       margin: 10px;
     }
-
+    .register-button{
+      text-align: center;
+    }
     .register-button button {
       background-color: #fff;
       color: black;
@@ -314,7 +332,11 @@
         width: 77vw;
         height: 77vw;
       }
-
+      
+      .register-item::before{
+      width: 77vw;
+      height: 77vw;
+    }
       .register-item h2 {
         font-size: 3.6vw;
         margin: 1vw;
@@ -397,7 +419,10 @@
         width: clamp(330px, 77vw, 500px);
         height: clamp(330px, 77vw, 500px);
       }
-
+      .register-item::before{
+        width: clamp(300px, 77vw, 500px);
+        height: clamp(300px, 77vw, 500px);
+      }
       .group {
         margin: 1% 0;
       }
@@ -478,6 +503,23 @@
         text-align: center;
       }
     }
+    @keyframes circle {
+			0% {
+				transform: rotate(0);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+    }
+    @keyframes Pulse {
+		form {
+			box-shadow:0px 0px 10px 10px #00c8ff5e;
+		}
+		to {
+			box-shadow:0px 0px 20px 10px #00c8ff5e;
+		}
+  }
   </style>
 </head>
 
@@ -524,10 +566,12 @@
 
         <div class="register-item">
           <h2>註冊會員</h2>
+          <form action="">
           <div class="input-list">
+            
             <div class="group">
               <label for="user-name">姓名</label>
-              <input type="text" id="user-name" name="user-name">
+              <input type="text" id="user-name" name="text">
             </div>
             <div class="group"><label for="user-tel">電話</label>
               <input type="tel" id="user-tel" name="user-tel">
@@ -542,16 +586,17 @@
 
             </div>
             <div class="group">
-              <label for="referrer id">密碼</label>
-              <input type="password" id="referrer id" name="referrer id">
+              <label for="referrerid">密碼</label>
+              <input type="password" id="referrer id" name="referrerid">
             </div>
 
           </div>
           <p>註冊帳號代表您已滿 18 歲並且同意 使用條款 以及 隱私權政策 ，配合法規限制，暫時不支援中國、香港、澳門、美國公民等可能禁止虛擬通貨的國家或地區新註冊及使用。</p>
           <div class="register-button">
-            <button>確定</button>
+            <button >確定</button>
             <button>取消</button>
           </div>
+        </form>
         </div>
 
       </div>
